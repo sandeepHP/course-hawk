@@ -70,6 +70,8 @@ def post_to_channel(state: State, course: Course) -> bool:
 def handle_updates(state: State) -> None:
     for upd in telegram.updates(state.data["update_offset"]):
         state.data["update_offset"] = upd["update_id"] + 1
+        cb, msg = upd.get("callback_query") or {}, upd.get("message") or {}
+        log.info("update %s: %s", upd["update_id"], cb.get("data") or (msg.get("text") or "")[:40] or list(upd))
         if "callback_query" in upd:
             handle_button(state, upd["callback_query"])
         elif "message" in upd:
@@ -83,6 +85,7 @@ def _from_admin(chat: dict) -> bool:
 def handle_button(state: State, cb: dict) -> None:
     msg = cb.get("message") or {}
     if not _from_admin(msg.get("chat") or {}):
+        log.info("button from another chat ignored")
         return
     action, _, key = cb.get("data", "").partition(":")
     entry = state.data["pending"].pop(key, None)
