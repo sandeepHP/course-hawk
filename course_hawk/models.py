@@ -1,0 +1,42 @@
+from dataclasses import asdict, dataclass, field
+
+
+@dataclass
+class Course:
+    """One Udemy course + coupon, filled in step by step: source -> verify -> filter."""
+
+    url: str
+    coupon: str = ""
+    title: str = ""
+    source: str = ""
+    # Filled in by the Udemy check.
+    course_id: int | None = None
+    headline: str = ""
+    rating: float = 0.0
+    num_reviews: int = 0
+    students: int = 0
+    hours: float = 0.0
+    language: str = ""
+    last_updated: str = ""  # "YYYY-MM-DD"
+    instructor: str = ""
+    list_price: float = 0.0
+    price: float | None = None  # price with the coupon applied; None = unknown
+    currency: str = "INR"
+    expires_text: str = ""
+    topics: list[str] = field(default_factory=list)
+
+    @property
+    def key(self) -> str:
+        return str(self.course_id) if self.course_id else self.url.split("?")[0].rstrip("/")
+
+    @property
+    def is_free(self) -> bool:
+        return self.price is not None and self.price == 0
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Course":
+        known = {f for f in cls.__dataclass_fields__}
+        return cls(**{k: v for k, v in data.items() if k in known})

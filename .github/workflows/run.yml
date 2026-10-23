@@ -1,0 +1,44 @@
+name: Course Hawk
+
+on:
+  schedule:
+    # Every 15 minutes. GitHub often starts scheduled runs late, so each post slot gets two chances.
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+    inputs:
+      scan_now:
+        description: "Scan for new courses now, even outside a preview slot"
+        type: boolean
+        default: false
+
+concurrency:
+  group: course-hawk
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
+          CUELINKS_TEMPLATE: ${{ secrets.CUELINKS_TEMPLATE }}
+        run: python -m course_hawk ${{ inputs.scan_now && '--scan-now' || '' }}
+      - name: Save state
+        run: |
+          git config user.name "course-hawk-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/state.json
+          git diff --cached --quiet || (git commit -m "Update state [skip ci]" && git push)

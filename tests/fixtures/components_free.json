@@ -1,0 +1,3 @@
+{"purchase":{"data":{"pricing_result":{"price":{"amount":0,"currency":"INR"},"list_price":{"amount":3199,"currency":"INR"}}}},
+ "redeem_coupon":{"discount_attempts":[{"code":"PYFREE","status":"applied"}]},
+ "discount_expiration":{"data":{"discount_deadline_text":"4 days left at this price!"}}}
