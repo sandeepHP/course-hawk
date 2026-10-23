@@ -32,7 +32,12 @@ def format_post(course: Course, expired: bool = False) -> str:
         stats.append(f"👥 {_count(course.students)} students")
     if course.hours:
         stats.append(f"⏱ {course.hours:g}h")
-    price = f"💰 {_money(course.list_price, course.currency)} → FREE" if course.list_price else "💰 FREE"
+    # Udemy prices by the visitor's country; GitHub's servers are not in India, so only show a
+    # rupee list price when Udemy actually returned one.
+    if course.list_price and course.currency == "INR":
+        price = f"💰 {_money(course.list_price, course.currency)} → FREE"
+    else:
+        price = "💰 Paid course → FREE"
     if course.expires_text:
         price += f" · ⏳ {escape(course.expires_text.replace(' at this price!', '').strip())}"
     lines = []

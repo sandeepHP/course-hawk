@@ -12,10 +12,17 @@ CUELINKS_TEMPLATE = os.environ.get("CUELINKS_TEMPLATE", "")
 STATE_FILE = os.environ.get("COURSE_HAWK_STATE", "state/state.json")
 DRY_RUN = os.environ.get("COURSE_HAWK_DRY_RUN", "") == "1"
 
-# RSS feeds of public free-coupon listing sites. Each item links to a Udemy course with a coupon.
+# RSS feeds of public free-coupon listing sites. Each item links to a Udemy course with a coupon,
+# either in the feed or on the item's page. A site that fails is skipped; check with
+# `python -m course_hawk.diagnose`.
 FEEDS = {
     "tutorialbar": "https://www.tutorialbar.com/feed/",
     "coursevania": "https://coursevania.com/feed/",
+    "couponscorpion": "https://couponscorpion.com/feed/",
+    "idownloadcoupon": "https://idownloadcoupon.com/feed/",
+    "onlinecourses_ooo": "https://www.onlinecourses.ooo/feed/",
+    "freewebcart": "https://freewebcart.com/feed/",
+    "discudemy": "https://www.discudemy.com/feed/",
 }
 
 FILTERS = {

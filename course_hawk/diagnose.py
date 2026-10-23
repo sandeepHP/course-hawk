@@ -5,22 +5,12 @@
 
 import logging
 
-from . import udemy
+from . import config, udemy
 from .filters import reject_reason
 from .http import get
 from .models import Course
 from .sources import find_on_page, parse_feed
 
-# Known free-coupon sites to try. The ones that work here can go into config.FEEDS.
-CANDIDATES = {
-    "tutorialbar": "https://www.tutorialbar.com/feed/",
-    "coursevania": "https://coursevania.com/feed/",
-    "couponscorpion": "https://couponscorpion.com/feed/",
-    "idownloadcoupon": "https://idownloadcoupon.com/feed/",
-    "onlinecourses_ooo": "https://www.onlinecourses.ooo/feed/",
-    "freewebcart": "https://freewebcart.com/feed/",
-    "discudemy": "https://www.discudemy.com/feed/",
-}
 
 
 def check_feed(name: str, url: str):
@@ -56,7 +46,7 @@ def check_feed(name: str, url: str):
 def main() -> None:
     logging.basicConfig(level=logging.WARNING)
     print("== Coupon sources")
-    samples = [c for c in (check_feed(n, u) for n, u in CANDIDATES.items()) if c]
+    samples = [c for c in (check_feed(n, u) for n, u in config.FEEDS.items()) if c]
     print("\n== Udemy price check")
     if not samples:
         print("No coupon link found to test with.")

@@ -105,6 +105,8 @@ def test_format_post(monkeypatch):
     assert "Python &amp; &lt;Data&gt;" in text
     assert "₹3,199 → FREE" in text and "2 days left" in text
     assert "couponCode=FREE24" in text and "#python #udemy" in text
+    c.currency = "USD"
+    assert "Paid course → FREE" in formatter.format_post(c)
     assert formatter.format_post(c, expired=True).startswith("❌ <b>EXPIRED</b>")
 
 
