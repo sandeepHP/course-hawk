@@ -127,8 +127,10 @@ def handle_message(state: State, msg: dict) -> None:
 
 
 def post_slot(state: State, at: datetime) -> None:
+    if not state.data["queue"]:
+        return  # leave the slot open, so courses approved later in its window still post
     slot = due_slot(config.SLOTS, state, at, "post ")
-    if not slot or not state.data["queue"]:
+    if not slot:
         return
     queue = sorted(state.data["queue"], key=lambda e: -score(State.course(e)))
     posted = 0

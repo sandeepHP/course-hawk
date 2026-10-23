@@ -370,3 +370,13 @@ def test_keys_fit_telegram_button_data():
         for b in sum(run.preview_buttons(c.key), []):
             assert len(b["callback_data"].encode()) <= 64
     assert free_course(url=long_url).key == free_course(url=long_url + "?x=1").key
+
+
+def test_empty_queue_keeps_slot_open(env, monkeypatch):
+    fake = FakeTelegram()
+    monkeypatch.setattr(run, "telegram", fake)
+    monkeypatch.setattr(run.udemy, "verify", lambda c: c)
+    run.post_slot(env, datetime.fromisoformat("2026-10-23T08:02:00+05:30"))
+    env.data["queue"].append({"course": good_course().to_dict(), "preview_id": 7})
+    run.post_slot(env, datetime.fromisoformat("2026-10-23T08:20:00+05:30"))
+    assert fake.sent and fake.sent[-1][0] == "@chan"
