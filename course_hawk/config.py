@@ -73,5 +73,6 @@ RECHECK_DAYS = 5  # how long posted coupons keep being checked for expiry
 # Previews per scan: Udemy coupon courses and always-free courses (Microsoft Learn, YouTube, catalog).
 COUPON_PREVIEWS = 6
 FREE_PREVIEWS = 4
+FREE_PER_SOURCE = 2  # so one source (e.g. Microsoft Learn) can't fill every free slot
 CATALOG_PER_DAY = 2  # the curated catalog is offered slowly, so it lasts
 CATALOG_REPEAT_DAYS = 120

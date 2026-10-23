@@ -195,10 +195,12 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
         except Exception as e:
             log.warning("%s failed: %s", name, e)
             continue
+        taken = 0
         for course in found:
-            if fresh(course) and not reject_reason(course, filters):
+            if taken < config.FREE_PER_SOURCE and fresh(course) and not reject_reason(course, filters):
                 free.append(course)
                 known.add(course.key)
+                taken += 1
     free = free[:config.FREE_PREVIEWS]
     catalog = free_sources.catalog()
     today = now().date().isoformat()
