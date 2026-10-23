@@ -90,9 +90,9 @@
    "preview_id": 6
   }
  },
- "posted": [],
- "queue": [
+ "posted": [
   {
+   "checked_at": "2026-10-23T16:37:38.748513+00:00",
    "course": {
     "certificate": "",
     "coupon": "C11E7F7151185CF49E67",
@@ -118,9 +118,12 @@
     ],
     "url": "https://www.udemy.com/course/bootcamp-az-900-microsoft-azure-fundamentals/"
    },
-   "preview_id": 5
+   "expired": false,
+   "message_id": 3,
+   "posted_at": "2026-10-23T16:37:38.748496+00:00"
   },
   {
+   "checked_at": "2026-10-23T16:37:39.485370+00:00",
    "course": {
     "certificate": "Free Microsoft Learn trophy",
     "coupon": "",
@@ -146,9 +149,12 @@
     ],
     "url": "https://learn.microsoft.com/en-us/training/paths/migrate-application-workloads-data-azure/"
    },
-   "preview_id": 8
+   "expired": false,
+   "message_id": 4,
+   "posted_at": "2026-10-23T16:37:39.485354+00:00"
   }
  ],
+ "queue": [],
  "seen": {
   "6871029": "2026-10-23T16:04:40.308795+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
