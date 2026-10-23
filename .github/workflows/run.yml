@@ -3,7 +3,7 @@ name: Course Hawk
 on:
   schedule:
     # Every 15 minutes. GitHub often starts scheduled runs late, so each post slot gets two chances.
-    - cron: "7,22,37,52 * * * *"
+    - cron: "8,23,38,53 * * * *"
   workflow_dispatch:
     inputs:
       scan_now:
