@@ -10,6 +10,10 @@ on:
         description: "Scan for new courses now, even outside a preview slot"
         type: boolean
         default: false
+      post_queue:
+        description: "Post every approved course now, without waiting for a slot"
+        type: boolean
+        default: false
 
 concurrency:
   group: course-hawk
@@ -35,7 +39,7 @@ jobs:
           TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
           TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
           CUELINKS_TEMPLATE: ${{ secrets.CUELINKS_TEMPLATE }}
-        run: python -m course_hawk ${{ inputs.scan_now && '--scan-now' || '' }}
+        run: python -m course_hawk ${{ inputs.scan_now && '--scan-now' || '' }} ${{ inputs.post_queue && '--post-queue' || '' }}
       - name: Save state
         run: |
           git config user.name "course-hawk-bot"

@@ -400,3 +400,13 @@ def test_failed_post_keeps_slot_and_queue(env, monkeypatch):
                                       ("-1001234567890", "-1001234567890"), ("", "")])
 def test_channel_value_normalised(raw, want):
     assert config._channel(raw) == want
+
+
+def test_post_queue_now_posts_everything(env, monkeypatch):
+    for i in range(3):
+        env.data["queue"].append({"course": good_course(course_id=i + 1).to_dict(), "preview_id": 7})
+    fake = FakeTelegram()
+    monkeypatch.setattr(run, "telegram", fake)
+    monkeypatch.setattr(run.udemy, "verify", lambda c: c)
+    run.post_slot(env, datetime.fromisoformat("2026-10-23T22:10:00+05:30"), now_all=True)
+    assert len(env.data["posted"]) == 3 and not env.data["queue"]

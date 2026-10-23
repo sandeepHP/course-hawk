@@ -133,21 +133,21 @@ def handle_message(state: State, msg: dict) -> None:
                                             f"Posted (last {config.RECHECK_DAYS + 1} days): {len(d['posted'])}")
 
 
-def post_slot(state: State, at: datetime) -> None:
+def post_slot(state: State, at: datetime, now_all: bool = False) -> None:
     if not state.data["queue"]:
         return  # leave the slot open, so courses approved later in its window still post
-    slot = due_slot(config.SLOTS, state, at, "post ")
-    if not slot:
+    slot = None if now_all else due_slot(config.SLOTS, state, at, "post ")
+    if not slot and not now_all:
         return
     queue = sorted(state.data["queue"], key=lambda e: -score(State.course(e)))
     posted = 0
     try:
-        while queue and posted < config.SLOTS[slot]:
+        while queue and (now_all or posted < config.SLOTS[slot]):
             entry = queue.pop(0)
             if post_to_channel(state, State.course(entry)):
                 posted += 1
     except Exception:
-        if not posted:  # e.g. the channel is misconfigured: keep the slot and the queue for the next run
+        if not posted and slot:  # e.g. the channel is misconfigured: keep the slot and the queue for the next run
             state.data["slots_done"].pop(f"{at.astimezone(IST):%Y-%m-%d} post {slot}", None)
             raise
     state.data["queue"] = queue
@@ -233,6 +233,7 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Course Hawk scheduled run")
     parser.add_argument("--scan-now", action="store_true", help="scan even if no preview slot is due")
+    parser.add_argument("--post-queue", action="store_true", help="post every approved course now")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     missing = [n for n in ("BOT_TOKEN", "CHANNEL", "ADMIN_CHAT_ID") if not getattr(config, n)]
@@ -242,7 +243,7 @@ def main() -> None:
         return
     state = State(config.STATE_FILE)
     at = now()
-    steps = [("updates", lambda: handle_updates(state)), ("post", lambda: post_slot(state, at)),
+    steps = [("updates", lambda: handle_updates(state)), ("post", lambda: post_slot(state, at, args.post_queue)),
              ("recheck", lambda: recheck_posted(state)), ("scan", lambda: scan(state, at, args.scan_now))]
     try:
         for name, step in steps:
