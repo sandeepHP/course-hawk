@@ -11,7 +11,9 @@ log = logging.getLogger(__name__)
 
 
 def _call(method: str, **params) -> dict:
-    if config.DRY_RUN and method not in ("getUpdates",):
+    if config.DRY_RUN and (method != "getUpdates" or not config.BOT_TOKEN):
+        if method == "getUpdates":
+            return []
         log.info("[dry run] %s %s", method, json.dumps(params, ensure_ascii=False)[:300])
         return {"message_id": 0}
     resp = requests.post(f"https://api.telegram.org/bot{config.BOT_TOKEN}/{method}", json=params, timeout=30)

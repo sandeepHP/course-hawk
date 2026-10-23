@@ -49,7 +49,7 @@ TOPICS = {
 
 # Post slots in IST (24h "HH:MM") and how many courses each slot posts.
 SLOTS = {"08:00": 2, "12:30": 1, "17:30": 2, "20:00": 1, "21:30": 2}
-# The scheduled run fires every 30 min, so a slot counts as due for this long after its time.
+# The scheduled run fires every 15 min (often late), so a slot counts as due for this long after its time.
 SLOT_WINDOW_MIN = 29
 
 # Courses with less than this many hours left are posted right after approval.

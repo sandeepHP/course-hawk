@@ -38,6 +38,12 @@ def test_parse_feed():
     assert second.url == "" and page2 == "https://example.org/post-2"
 
 
+def test_parse_feed_not_well_formed():
+    bad = (FIX / "feed.xml").read_text().replace("Excel Basics", "Excel & VBA") + "\n"
+    items = sources.parse_feed("\ufeff\n" + bad, "x")
+    assert len(items) == 2 and items[0][0].coupon == "PYFREE" and items[1][0].title == "Excel & VBA"
+
+
 def test_parse_course_page():
     c = udemy.parse_course_page((FIX / "course_page.html").read_text(), Course(url="u"))
     assert c.course_id == 567828

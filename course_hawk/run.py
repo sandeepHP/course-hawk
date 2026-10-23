@@ -1,6 +1,6 @@
 """One scheduled run: read your bot replies, post a due slot, mark expired posts, scan for new courses.
 
-Runs every 30 minutes on GitHub Actions. Each step is safe to skip or repeat."""
+Runs every 15 minutes on GitHub Actions. Each step is safe to skip or repeat."""
 
 import argparse
 import logging
