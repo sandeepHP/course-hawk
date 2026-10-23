@@ -9,7 +9,7 @@ from . import udemy
 from .filters import reject_reason
 from .http import get
 from .models import Course
-from .sources import find_udemy_link, parse_feed
+from .sources import find_on_page, parse_feed
 
 # Known free-coupon sites to try. The ones that work here can go into config.FEEDS.
 CANDIDATES = {
@@ -44,7 +44,7 @@ def check_feed(name: str, url: str):
     page = next((p for _, p in items if p), "")
     if page:
         try:
-            found = find_udemy_link(get(page).text)
+            found = find_on_page(page)
             print(f"   first item page: {'coupon link found' if found else 'no Udemy coupon link'} ({page})")
             if found:
                 return Course(url=found[0], coupon=found[1], title=items[0][0].title, source=name)
@@ -61,8 +61,11 @@ def main() -> None:
     if not samples:
         print("No coupon link found to test with.")
     for course in samples[:3]:
-        udemy.verify(course)
+        trace = []
+        udemy.verify(course, trace)
         print(f"{course.url}?couponCode={course.coupon}")
+        for line in trace:
+            print(f"   {line}")
         print(f"   id={course.course_id} price={course.price} list={course.list_price} {course.currency} "
               f"expires={course.expires_text!r}")
         print(f"   rating={course.rating} reviews={course.num_reviews} students={course.students} "

@@ -247,3 +247,18 @@ def test_reply_edits_description(env, monkeypatch):
     run.handle_updates(env)
     assert env.data["pending"]["123"]["course"]["headline"] == "Best NumPy intro"
     assert "Best NumPy intro" in fake.edited[0][2]
+
+
+def test_parse_api_course():
+    data = {"id": 99, "title": "AWS Basics", "headline": "Start with AWS", "avg_rating": 4.41,
+            "num_reviews": 300, "num_subscribers": 12000, "content_info_short": "3.5 total hours",
+            "last_update_date": "2025-08-01", "locale": {"simple_english_title": "English"},
+            "visible_instructors": [{"title": "A Teacher"}]}
+    c = udemy.parse_api_course(data, Course(url="u"))
+    assert (c.course_id, c.students, c.hours, c.language, c.instructor) == (99, 12000, 3.5, "english", "A Teacher")
+
+
+def test_go_page_and_slug():
+    assert sources.go_page("https://www.discudemy.com/english/python-x") == "https://www.discudemy.com/go/python-x"
+    assert sources.go_page("https://example.org/post") is None
+    assert udemy.slug_of("https://www.udemy.com/course/python-x/") == "python-x"

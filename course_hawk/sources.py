@@ -27,6 +27,19 @@ def find_udemy_link(text: str) -> tuple[str, str] | None:
     return f"https://www.udemy.com/course/{slug}/", coupon
 
 
+def go_page(page: str) -> str | None:
+    """Some sites put the Udemy link on a second "go" page."""
+    m = re.match(r"(https?://(?:www\.)?discudemy\.com)/[\w-]+/([\w-]+)/?$", page)
+    return f"{m.group(1)}/go/{m.group(2)}" if m else None
+
+
+def find_on_page(page: str) -> tuple[str, str] | None:
+    found = find_udemy_link(get(page).text)
+    if not found and go_page(page):
+        found = find_udemy_link(get(go_page(page)).text)
+    return found
+
+
 def parse_feed(xml_text: str, source: str) -> list[tuple[Course, str]]:
     """Parse an RSS feed into (course, item page URL). A course has an empty URL when the
     feed item itself has no Udemy link and the item page must be opened to find it."""
@@ -69,7 +82,7 @@ def scan_feeds(feeds: dict[str, str] | None = None) -> list[Course]:
         for course, page in items:
             if not course.url and page:
                 try:
-                    found = find_udemy_link(get(page).text)
+                    found = find_on_page(page)
                 except Exception as e:
                     log.warning("page %s failed: %s", page, e)
                     found = None

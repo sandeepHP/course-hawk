@@ -95,18 +95,64 @@ def parse_components(data: dict, course: Course) -> Course:
     return course
 
 
-def verify(course: Course) -> Course:
-    """Fill in details and the coupon price. Network errors leave price None (= not free)."""
+COURSE_API_URL = ("https://www.udemy.com/api-2.0/courses/{slug}/?fields[course]=id,title,headline,avg_rating,"
+                  "num_reviews,num_subscribers,content_info_short,last_update_date,locale,visible_instructors")
+
+
+def parse_api_course(data: dict, course: Course) -> Course:
+    """Course details from Udemy's public course API (looked up by slug)."""
+    course.course_id = data.get("id") or course.course_id
+    course.title = data.get("title") or course.title
+    course.headline = data.get("headline") or course.headline
+    course.rating = float(data.get("avg_rating") or course.rating or 0)
+    course.num_reviews = int(data.get("num_reviews") or course.num_reviews or 0)
+    course.students = int(data.get("num_subscribers") or course.students or 0)
+    m = re.match(r"([\d.]+)", data.get("content_info_short") or "")
+    if m and "hour" in data.get("content_info_short", ""):
+        course.hours = float(m.group(1))
+    locale = data.get("locale") or {}
+    lang = locale.get("simple_english_title") or locale.get("english_title") or ""
+    course.language = lang.lower() or course.language
+    course.last_updated = (data.get("last_update_date") or course.last_updated or "")[:10]
+    instructors = data.get("visible_instructors") or []
+    if instructors:
+        course.instructor = instructors[0].get("title") or instructors[0].get("display_name") or ""
+    return course
+
+
+def slug_of(url: str) -> str:
+    m = re.search(r"/course/([\w-]+)", url)
+    return m.group(1) if m else ""
+
+
+def verify(course: Course, trace: list | None = None) -> Course:
+    """Fill in details and the coupon price. Errors leave price None (= not free).
+    trace, if given, collects one line per request for diagnostics."""
+    note = trace.append if trace is not None else (lambda line: None)
+    course.price = None
+    if not course.course_id:
+        try:
+            resp = get(COURSE_API_URL.format(slug=slug_of(course.url)))
+            parse_api_course(resp.json(), course)
+            note(f"course API: HTTP {resp.status_code}, id={course.course_id}")
+        except Exception as e:
+            note(f"course API failed: {str(e)[:150]}")
+    if not course.course_id or not course.students:
+        try:
+            resp = get(course.url)
+            parse_course_page(resp.text, course)
+            note(f"course page: HTTP {resp.status_code}, {len(resp.text)} bytes, id={course.course_id}")
+        except Exception as e:
+            note(f"course page failed: {str(e)[:150]}")
+    if not course.course_id:
+        log.info("no course id for %s", course.url)
+        return course
     try:
-        if not course.course_id:
-            parse_course_page(get(course.url).text, course)
-        if not course.course_id:
-            log.info("no course id for %s", course.url)
-            course.price = None
-            return course
         resp = get(COMPONENTS_URL.format(id=course.course_id, coupon=course.coupon))
+        note(f"price check: HTTP {resp.status_code}, starts {resp.text[:200]!r}")
         parse_components(resp.json(), course)
     except Exception as e:
+        note(f"price check failed: {str(e)[:150]}")
         log.warning("verify failed for %s: %s", course.url, e)
         course.price = None
     return course
