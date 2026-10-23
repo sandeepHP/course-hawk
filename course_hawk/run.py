@@ -147,10 +147,12 @@ def post_slot(state: State, at: datetime, now_all: bool = False) -> None:
             if post_to_channel(state, State.course(entry)):
                 posted += 1
     except Exception:
-        if not posted and slot:  # e.g. the channel is misconfigured: keep the slot and the queue for the next run
+        queue.insert(0, entry)  # not posted: keep it for the next try
+        if not posted and slot:  # e.g. the channel is misconfigured: keep the slot open too
             state.data["slots_done"].pop(f"{at.astimezone(IST):%Y-%m-%d} post {slot}", None)
-            raise
-    state.data["queue"] = queue
+        raise
+    finally:
+        state.data["queue"] = queue
 
 
 def recheck_posted(state: State) -> None:

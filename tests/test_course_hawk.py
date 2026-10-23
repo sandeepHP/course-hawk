@@ -393,6 +393,9 @@ def test_failed_post_keeps_slot_and_queue(env, monkeypatch):
     with pytest.raises(RuntimeError):
         run.post_slot(env, at)
     assert len(env.data["queue"]) == 1 and not env.data["slots_done"]
+    with pytest.raises(RuntimeError):
+        run.post_slot(env, at, now_all=True)
+    assert len(env.data["queue"]) == 1
 
 
 @pytest.mark.parametrize("raw,want", [("@coursehawk_free", "@coursehawk_free"), ("coursehawk_free", "@coursehawk_free"),
