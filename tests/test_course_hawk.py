@@ -393,3 +393,10 @@ def test_failed_post_keeps_slot_and_queue(env, monkeypatch):
     with pytest.raises(RuntimeError):
         run.post_slot(env, at)
     assert len(env.data["queue"]) == 1 and not env.data["slots_done"]
+
+
+@pytest.mark.parametrize("raw,want", [("@coursehawk_free", "@coursehawk_free"), ("coursehawk_free", "@coursehawk_free"),
+                                      ("https://t.me/coursehawk_free/", "@coursehawk_free"), (" t.me/x ", "@x"),
+                                      ("-1001234567890", "-1001234567890"), ("", "")])
+def test_channel_value_normalised(raw, want):
+    assert config._channel(raw) == want

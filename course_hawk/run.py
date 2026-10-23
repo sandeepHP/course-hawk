@@ -6,6 +6,7 @@ import argparse
 import logging
 import random
 from collections import Counter
+from html import escape
 from datetime import datetime, timedelta, timezone
 
 from . import config, free_sources, telegram, udemy
@@ -52,7 +53,13 @@ def post_to_channel(state: State, course: Course) -> bool:
         if not course.is_free:
             telegram.send(config.ADMIN_CHAT_ID, f"⚠️ Coupon ended before posting: {course.title}")
             return False
-    message_id = telegram.send(config.CHANNEL, format_post(course))
+    try:
+        message_id = telegram.send(config.CHANNEL, format_post(course))
+    except RuntimeError as e:
+        telegram.send(config.ADMIN_CHAT_ID, f"⚠️ Could not post to the channel <code>{escape(config.CHANNEL)}</code>: {escape(str(e))}\n\n"
+                      "Check the TELEGRAM_CHANNEL secret is the channel's @username and that this bot is an "
+                      "admin of the channel with permission to post.")
+        raise
     state.data["posted"].append({"course": course.to_dict(), "message_id": message_id,
                                  "posted_at": now().isoformat(), "checked_at": now().isoformat(),
                                  "expired": False})

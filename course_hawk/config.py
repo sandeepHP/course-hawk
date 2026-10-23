@@ -3,7 +3,20 @@
 import os
 
 BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-CHANNEL = os.environ.get("TELEGRAM_CHANNEL", "")  # e.g. "@coursehawk_free"
+
+
+def _channel(value: str) -> str:
+    """Accept "@name", "name", "t.me/name" or a numeric id like "-1001234567890"."""
+    value = value.strip().rstrip("/")
+    for prefix in ("https://", "http://", "t.me/", "telegram.me/"):
+        if value.startswith(prefix):
+            value = value[len(prefix):]
+    if value and not value.startswith(("@", "-")) and not value.isdigit():
+        value = "@" + value
+    return value
+
+
+CHANNEL = _channel(os.environ.get("TELEGRAM_CHANNEL", ""))  # e.g. "@coursehawk_free"
 ADMIN_CHAT_ID = os.environ.get("TELEGRAM_ADMIN_CHAT_ID", "")  # your private chat with the bot
 # Optional Cuelinks wrapping: your tracking link with {url} where the Udemy link goes, copied from
 # the Cuelinks dashboard. Leave empty to post plain Udemy links.
