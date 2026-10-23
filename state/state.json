@@ -94,62 +94,6 @@
  "queue": [
   {
    "course": {
-    "certificate": "",
-    "coupon": "69B66FCDA303A59D27F0",
-    "course_id": 6871029,
-    "currency": "USD",
-    "expires_text": "",
-    "headline": "All-in-One AI Content Generation: Master ChatGPT, Google Vids, Gemini Speech Generation, Adobe Podcast & Nano Banana",
-    "hours": 3.5,
-    "instructor": "Neyamul Hasan, M.Pharm",
-    "kind": "coupon",
-    "language": "english",
-    "last_updated": "2026-03-05",
-    "list_price": 19.99,
-    "num_reviews": 50,
-    "price": 0.0,
-    "provider": "Udemy",
-    "rating": 4.65,
-    "source": "discudemy",
-    "students": 10831,
-    "title": "Full-Stack AI Creator: Audio, Video, Image w/ Google & Adobe",
-    "topics": [
-     "ai"
-    ],
-    "url": "https://www.udemy.com/course/ai-content-generation-audio-video-image-text-with-google-adobe-chatgpt/"
-   },
-   "preview_id": 4
-  },
-  {
-   "course": {
-    "certificate": "",
-    "coupon": "C11E7F7151185CF49E67",
-    "course_id": 7126561,
-    "currency": "USD",
-    "expires_text": "",
-    "headline": "Bootcamp AZ-900: Microsoft Azure Fundamentals Course | AZ-900, Microsoft Azure Fundamentals AZ900, Azure AZ900, AZ-900",
-    "hours": 0.0,
-    "instructor": "Codaming • 300k+ Learners Worldwide",
-    "kind": "coupon",
-    "language": "english",
-    "last_updated": "2026-08-13",
-    "list_price": 0.0,
-    "num_reviews": 162,
-    "price": 0.0,
-    "provider": "Udemy",
-    "rating": 4.3373494,
-    "source": "tutorialbar",
-    "students": 8257,
-    "title": "Bootcamp AZ-900: Microsoft Azure Fundamentals Course",
-    "topics": [
-     "cloud"
-    ],
-    "url": "https://www.udemy.com/course/bootcamp-az-900-microsoft-azure-fundamentals/"
-   },
-   "preview_id": 5
-  },
-  {
-   "course": {
     "certificate": "Free Microsoft Learn trophy",
     "coupon": "",
     "course_id": null,
