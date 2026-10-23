@@ -25,6 +25,13 @@ FEEDS = {
     "discudemy": "https://www.discudemy.com/feed/",
 }
 
+# YouTube channels that publish full free courses (channel name -> channel id).
+YOUTUBE_CHANNELS = {
+    "freeCodeCamp": "UC8butISFwT-Wl7EV0hUK0BQ",
+}
+# A video counts as a course only if its title has one of these.
+YOUTUBE_TITLE_WORDS = ["full course", "crash course", "course for beginners", "bootcamp", "complete course"]
+
 FILTERS = {
     "min_rating": 4.0,
     "min_students": 1000,
@@ -63,4 +70,8 @@ SLOT_WINDOW_MIN = 29
 URGENT_HOURS = 12
 DEDUPE_DAYS = 30
 RECHECK_DAYS = 5  # how long posted coupons keep being checked for expiry
-MAX_PREVIEWS_PER_RUN = 10
+# Previews per scan: Udemy coupon courses and always-free courses (Microsoft Learn, YouTube, catalog).
+COUPON_PREVIEWS = 6
+FREE_PREVIEWS = 4
+CATALOG_PER_DAY = 2  # the curated catalog is offered slowly, so it lasts
+CATALOG_REPEAT_DAYS = 120

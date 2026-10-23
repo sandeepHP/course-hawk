@@ -4,9 +4,10 @@ Runs every 15 minutes on GitHub Actions. Each step is safe to skip or repeat."""
 
 import argparse
 import logging
+import random
 from datetime import datetime, timedelta, timezone
 
-from . import config, telegram, udemy
+from . import config, free_sources, telegram, udemy
 from .filters import reject_reason, score
 from .formatter import format_post
 from .models import Course
@@ -41,10 +42,15 @@ def due_slot(slots, state: State, at: datetime, prefix: str) -> str | None:
 
 def post_to_channel(state: State, course: Course) -> bool:
     """Check the price one last time, then post. Returns False if the coupon died."""
-    udemy.verify(course)
-    if not course.is_free:
-        telegram.send(config.ADMIN_CHAT_ID, f"⚠️ Coupon ended before posting: {course.title}")
-        return False
+    if course.kind == "free":
+        if not free_sources.link_alive(course.url):
+            telegram.send(config.ADMIN_CHAT_ID, f"⚠️ Link is down, not posted: {course.title}")
+            return False
+    else:
+        udemy.verify(course)
+        if not course.is_free:
+            telegram.send(config.ADMIN_CHAT_ID, f"⚠️ Coupon ended before posting: {course.title}")
+            return False
     message_id = telegram.send(config.CHANNEL, format_post(course))
     state.data["posted"].append({"course": course.to_dict(), "message_id": message_id,
                                  "posted_at": now().isoformat(), "checked_at": now().isoformat(),
@@ -137,6 +143,8 @@ def recheck_posted(state: State) -> None:
     for entry in state.data["posted"]:
         posted_at = datetime.fromisoformat(entry["posted_at"])
         checked = datetime.fromisoformat(entry.get("checked_at") or entry["posted_at"])
+        if entry["course"].get("kind") == "free":
+            continue
         if entry["expired"] or posted_at < cutoff or now() - checked < RECHECK_EVERY:
             continue
         course = State.course(entry)
@@ -153,25 +161,55 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
         return
     filters = {**config.FILTERS,
                "blocked_instructors": config.FILTERS["blocked_instructors"] + state.data.get("banned", [])}
-    candidates = []
     known = set(state.data["pending"]) | {State.course(e).key for e in state.data["queue"]}
-    for course in scan_feeds():
-        if course.key in known or state.seen_recently(course.key, config.DEDUPE_DAYS):
+
+    def fresh(course: Course, days: int = config.DEDUPE_DAYS) -> bool:
+        return course.key not in known and not state.seen_recently(course.key, days)
+
+    coupons = []
+    try:
+        found = scan_feeds()
+    except Exception:
+        log.exception("coupon sources failed")
+        found = []
+    for course in found:
+        if not fresh(course):
             continue
         udemy.verify(course)
-        if state.seen_recently(course.key, config.DEDUPE_DAYS) or course.key in known:
+        if not fresh(course):
             continue  # same course found under its slug and its id
         reason = reject_reason(course, filters)
         if reason:
             log.info("rejected %s: %s", course.title, reason)
             continue
-        candidates.append(course)
+        coupons.append(course)
         known.add(course.key)
-    for course in sorted(candidates, key=score, reverse=True)[:config.MAX_PREVIEWS_PER_RUN]:
+    coupons = sorted(coupons, key=score, reverse=True)[:config.COUPON_PREVIEWS]
+
+    free = []
+    for name, fetch in (("microsoft_learn", free_sources.microsoft_learn), ("youtube", free_sources.youtube)):
+        try:
+            found = fetch()
+        except Exception as e:
+            log.warning("%s failed: %s", name, e)
+            continue
+        for course in found:
+            if fresh(course) and not reject_reason(course, filters):
+                free.append(course)
+                known.add(course.key)
+    free = free[:config.FREE_PREVIEWS]
+    catalog = free_sources.catalog()
+    today = now().date().isoformat()
+    offered_today = sum(1 for c in catalog if state.data["seen"].get(c.key, "")[:10] == today)
+    picks = [c for c in catalog if fresh(c, config.CATALOG_REPEAT_DAYS)]
+    random.shuffle(picks)
+    free += picks[:max(0, min(config.CATALOG_PER_DAY - offered_today, config.FREE_PREVIEWS - len(free)))]
+
+    for course in coupons + free:
         preview_id = telegram.send(config.ADMIN_CHAT_ID, format_post(course), buttons=preview_buttons(course.key))
         state.data["pending"][course.key] = {"course": course.to_dict(), "preview_id": preview_id}
         state.mark_seen(course.key)
-    log.info("scan: %d new previews", min(len(candidates), config.MAX_PREVIEWS_PER_RUN))
+    log.info("scan: %d coupon and %d free previews", len(coupons), len(free))
 
 
 def main() -> None:

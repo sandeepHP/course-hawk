@@ -1,8 +1,17 @@
 # Course Hawk
 
-Finds free (100% off) Udemy coupons, checks on Udemy that each one really shows ₹0, filters out weak
-or off-topic courses, and sends you a preview in Telegram. You tap **Approve**, and it posts to your
-channel in the next time slot. Posts whose coupon later ends are marked **EXPIRED**.
+Finds free courses from providers worldwide, checks them, and sends you a preview in Telegram.
+You tap **Approve**, and it posts to your channel in the next time slot.
+
+Sources:
+
+- **Paid courses made free by coupons** (Udemy): found on public coupon sites, and each coupon is
+  checked on Udemy to really show a price of 0. Posts whose coupon later ends are marked **EXPIRED**.
+- **Microsoft Learn**: new and updated learning paths from its public catalog API.
+- **YouTube full courses**: new full-length courses from channels like freeCodeCamp.
+- **Curated catalog** (`course_hawk/catalog.json`): hand-picked free courses from Harvard CS50,
+  Kaggle, Hugging Face, Google, MIT, Cisco, IBM, AWS, Coursera (audit), NPTEL and more. Two are
+  offered a day, and each link is checked before posting. Add your own entries to the file.
 
 Everything runs free on GitHub Actions (public repo) with no server or database: state lives in
 `state/state.json`, which each run commits back.
@@ -13,9 +22,10 @@ Every 15 minutes the workflow runs `python -m course_hawk`, which:
 
 1. Reads your button taps and messages to the bot.
 2. Posts the best queued courses if a post slot is due (08:00, 12:30, 17:30, 20:00, 21:30 IST).
-   Each course's price is checked again right before posting.
-3. Rechecks posts from the last 5 days every 3 hours and marks ended coupons as expired.
-4. At 07:30, 12:00, 17:00 and 21:00 IST, scans the sources and sends up to 10 previews.
+   Right before posting, coupons are price-checked again and free course links are checked.
+3. Rechecks coupon posts from the last 5 days every 3 hours and marks ended coupons as expired.
+4. At 07:30, 12:00, 17:00 and 21:00 IST, scans the sources and sends previews: up to 6 coupon
+   courses and 4 always-free courses.
 
 ## Your bot buttons
 
@@ -45,7 +55,9 @@ Reply to a preview with text to replace its description. `/queue` lists approved
 
 ## Settings
 
-Filters, topics, sources and slots are in `course_hawk/config.py`.
+Filters, topics, sources, YouTube channels and slots are in `course_hawk/config.py`; the
+curated courses are in `course_hawk/catalog.json`. `python -m course_hawk.diagnose` checks which
+sources work from where it runs.
 
 ## Development
 

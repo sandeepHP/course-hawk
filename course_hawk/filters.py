@@ -15,6 +15,12 @@ def reject_reason(course: Course, f: dict | None = None) -> str | None:
     f = f or config.FILTERS
     if not course.is_free:
         return "not free"
+    if course.kind == "free":
+        text = f"{course.title} {course.headline}".lower()
+        if any(w in text for w in f["blocked_words"]):
+            return "blocked word"
+        course.topics = course.topics or topics_for(course)
+        return None if course.topics else "off topic"
     popular = course.rating >= f["min_rating"] and course.students >= f["min_students"]
     rated_new = course.rating >= f["alt_min_rating"] and course.num_reviews >= f["alt_min_reviews"]
     if not (popular or rated_new):
@@ -40,4 +46,6 @@ def reject_reason(course: Course, f: dict | None = None) -> str | None:
 
 
 def score(course: Course) -> float:
+    if course.kind == "free":
+        return 0.0
     return course.rating * math.log10(max(course.students, 10))

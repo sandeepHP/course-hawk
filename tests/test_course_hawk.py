@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from course_hawk import config, filters, formatter, run, sources, udemy
+from course_hawk import config, filters, formatter, free_sources, run, sources, udemy
 from course_hawk.models import Course
 from course_hawk.state import State
 
@@ -158,10 +158,17 @@ def button(key, action, update_id=1):
                                                         "message": {"message_id": 7, "chat": {"id": 42}}}}
 
 
+def no_free(monkeypatch, catalog=()):
+    monkeypatch.setattr(run.free_sources, "microsoft_learn", lambda: [])
+    monkeypatch.setattr(run.free_sources, "youtube", lambda: [])
+    monkeypatch.setattr(run.free_sources, "catalog", lambda: list(catalog))
+
+
 def test_scan_sends_previews_and_dedupes(env, monkeypatch):
     fake = FakeTelegram()
     monkeypatch.setattr(run, "telegram", fake)
     monkeypatch.setattr(run, "scan_feeds", lambda: [good_course(price=None, course_id=None)])
+    no_free(monkeypatch)
     def verify(c):
         for k, v in good_course().to_dict().items():
             setattr(c, k, v)
@@ -264,3 +271,94 @@ def test_go_page_and_slug():
     assert sources.go_page("https://www.discudemy.com/english/python-x") == "https://www.discudemy.com/go/python-x"
     assert sources.go_page("https://example.org/post") is None
     assert udemy.slug_of("https://www.udemy.com/course/python-x/") == "python-x"
+
+
+def free_course(**kw) -> Course:
+    base = dict(url="https://cs50.harvard.edu/python/", title="CS50P", provider="Harvard University",
+                kind="free", certificate="Free certificate", topics=["python"], headline="Python from zero")
+    base.update(kw)
+    return Course(**base)
+
+
+def test_catalog_is_valid():
+    courses = free_sources.catalog()
+    assert len(courses) >= 30
+    assert len({c.url for c in courses}) == len(courses)
+    for c in courses:
+        assert c.url.startswith("https://") and c.title and c.provider and c.kind == "free"
+        assert c.topics and set(c.topics) <= set(config.TOPICS), c.title
+
+
+def test_parse_ms_learn():
+    data = {"learningPaths": [
+        {"title": "Get started with Azure AI", "summary": "Build AI apps.", "url": "https://learn.microsoft.com/training/paths/ai/?WT.mc_id=api",
+         "duration_in_minutes": 150, "last_modified": "2026-10-20T10:00:00+00:00"},
+        {"title": "Old path", "url": "https://learn.microsoft.com/x", "last_modified": "2024-01-01T00:00:00+00:00"}]}
+    out = free_sources.parse_ms_learn(data, datetime.fromisoformat("2026-10-10T00:00:00+00:00"))
+    assert len(out) == 1 and out[0].url == "https://learn.microsoft.com/training/paths/ai/" and out[0].hours == 2.5
+
+
+def test_parse_youtube():
+    xml = """<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <entry><title>Docker Full Course for Beginners</title><link rel="alternate" href="https://www.youtube.com/watch?v=abc"/>
+    <published>2026-10-21T12:00:00+00:00</published><media:group><media:description>Learn Docker in this full course.
+    More text</media:description></media:group></entry>
+    <entry><title>Podcast with a developer</title><link rel="alternate" href="https://www.youtube.com/watch?v=def"/>
+    <published>2026-10-21T12:00:00+00:00</published></entry></feed>"""
+    out = free_sources.parse_youtube(xml, "freeCodeCamp", datetime.fromisoformat("2026-10-15T00:00:00+00:00"))
+    assert [c.title for c in out] == ["Docker Full Course for Beginners"]
+    assert out[0].provider == "freeCodeCamp (YouTube)" and out[0].headline == "Learn Docker in this full course."
+    assert filters.reject_reason(out[0]) is None and "devops" in out[0].topics
+
+
+def test_free_post_format():
+    text = formatter.format_post(free_course())
+    assert "🏫 Harvard University" in text and "🎖 Free certificate" in text and "💰 FREE" in text
+    assert "Start learning" in text and text.endswith("#python #harvarduniversity")
+    assert "Udemy" not in text
+
+
+def test_free_course_filters():
+    assert filters.reject_reason(free_course()) is None
+    assert filters.reject_reason(free_course(title="Make money online", topics=[])) == "blocked word"
+    assert filters.reject_reason(free_course(title="Gardening", headline="", topics=[])) == "off topic"
+
+
+def test_scan_mixes_free_and_limits_catalog(env, monkeypatch):
+    fake = FakeTelegram()
+    monkeypatch.setattr(run, "telegram", fake)
+    monkeypatch.setattr(run, "scan_feeds", lambda: [])
+    cat = [free_course(url=f"https://example.org/{i}", title=f"Course {i}") for i in range(5)]
+    no_free(monkeypatch, cat)
+    monkeypatch.setattr(run.free_sources, "youtube",
+                        lambda: [free_course(url="https://www.youtube.com/watch?v=1", provider="freeCodeCamp (YouTube)")])
+    run.scan(env, datetime.now(), force=True)
+    assert len(fake.sent) == 1 + config.CATALOG_PER_DAY
+    run.scan(env, datetime.now(), force=True)
+    assert len(fake.sent) == 1 + config.CATALOG_PER_DAY  # catalog quota used up today
+
+
+def test_free_course_posts_after_link_check(env, monkeypatch):
+    env.data["pending"]["k"] = {"course": free_course(url="k").to_dict(), "preview_id": 7}
+    fake = FakeTelegram([button("k", "p")])
+    monkeypatch.setattr(run, "telegram", fake)
+    monkeypatch.setattr(run.free_sources, "link_alive", lambda url: True)
+    run.handle_updates(env)
+    assert fake.sent[-1][0] == "@chan" and env.data["posted"][0]["course"]["kind"] == "free"
+
+
+def test_dead_free_link_not_posted(env, monkeypatch):
+    env.data["pending"]["k"] = {"course": free_course(url="k").to_dict(), "preview_id": 7}
+    fake = FakeTelegram([button("k", "p")])
+    monkeypatch.setattr(run, "telegram", fake)
+    monkeypatch.setattr(run.free_sources, "link_alive", lambda url: False)
+    run.handle_updates(env)
+    assert not env.data["posted"]
+
+
+def test_recheck_skips_free(env, monkeypatch):
+    old = (datetime.now().astimezone() - timedelta(hours=4)).isoformat()
+    env.data["posted"].append({"course": free_course().to_dict(), "message_id": 5, "posted_at": old,
+                               "checked_at": old, "expired": False})
+    monkeypatch.setattr(run.udemy, "verify", lambda c: pytest.fail("free courses are not price checked"))
+    run.recheck_posted(env)

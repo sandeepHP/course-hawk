@@ -5,7 +5,7 @@
 
 import logging
 
-from . import config, udemy
+from . import config, free_sources, udemy
 from .filters import reject_reason
 from .http import get
 from .models import Course
@@ -61,6 +61,21 @@ def main() -> None:
         print(f"   rating={course.rating} reviews={course.num_reviews} students={course.students} "
               f"hours={course.hours} lang={course.language!r} updated={course.last_updated!r}")
         print(f"   filter: {reject_reason(course) or 'PASS'}")
+    check_free()
+
+
+def check_free() -> None:
+    print("\n== Always-free sources")
+    for name, fetch in (("Microsoft Learn", free_sources.microsoft_learn), ("YouTube", free_sources.youtube)):
+        try:
+            found = fetch()
+            print(f"{name}: {len(found)} new courses" + (f", e.g. {found[0].title!r}" if found else ""))
+        except Exception as e:
+            print(f"{name}: FAILED {e.__class__.__name__}: {str(e)[:120]}")
+    dead = [c for c in free_sources.catalog() if not free_sources.link_alive(c.url)]
+    print(f"Catalog: {len(free_sources.catalog())} courses, {len(dead)} links down")
+    for c in dead:
+        print(f"   down: {c.title} ({c.url})")
 
 
 if __name__ == "__main__":

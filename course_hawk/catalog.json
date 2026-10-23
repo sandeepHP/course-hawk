@@ -1,0 +1,435 @@
+[
+ {
+  "title": "CS50x: Introduction to Computer Science",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/x/",
+  "topics": [
+   "python",
+   "webdev"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Harvard's famous intro to programming: C, Python, SQL and web basics."
+ },
+ {
+  "title": "CS50P: Introduction to Programming with Python",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/python/",
+  "topics": [
+   "python"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Python from zero, with problem sets and a final project."
+ },
+ {
+  "title": "CS50 AI: Introduction to Artificial Intelligence with Python",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/ai/",
+  "topics": [
+   "ai",
+   "python"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Search, knowledge, uncertainty, neural networks and language models, in Python."
+ },
+ {
+  "title": "CS50 Web Programming with Python and JavaScript",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/web/",
+  "topics": [
+   "webdev",
+   "python"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Django, JavaScript, SQL and building real web apps."
+ },
+ {
+  "title": "CS50 Cybersecurity",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/cybersecurity/",
+  "topics": [
+   "cybersecurity"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Security for everyone: accounts, data, systems and software."
+ },
+ {
+  "title": "CS50 SQL: Introduction to Databases",
+  "provider": "Harvard University",
+  "url": "https://cs50.harvard.edu/sql/",
+  "topics": [
+   "data"
+  ],
+  "certificate": "Free certificate",
+  "headline": "SQL and database design with SQLite, PostgreSQL and MySQL."
+ },
+ {
+  "title": "Python",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/python",
+  "topics": [
+   "python"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Short hands-on Python course in the browser, no setup needed."
+ },
+ {
+  "title": "Pandas",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/pandas",
+  "topics": [
+   "python",
+   "data"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Clean, reshape and analyse data with pandas."
+ },
+ {
+  "title": "Intro to Machine Learning",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+  "topics": [
+   "ai",
+   "data"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Build and validate your first machine learning models."
+ },
+ {
+  "title": "Intro to Deep Learning",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/intro-to-deep-learning",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Neural networks with TensorFlow and Keras, step by step."
+ },
+ {
+  "title": "Intro to SQL",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/intro-to-sql",
+  "topics": [
+   "data"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Query real BigQuery datasets with SQL."
+ },
+ {
+  "title": "Data Visualization",
+  "provider": "Kaggle Learn",
+  "url": "https://www.kaggle.com/learn/data-visualization",
+  "topics": [
+   "data",
+   "python"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Charts with seaborn that tell a clear story."
+ },
+ {
+  "title": "LLM Course",
+  "provider": "Hugging Face",
+  "url": "https://huggingface.co/learn/llm-course",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "Transformers, fine-tuning and building with large language models."
+ },
+ {
+  "title": "AI Agents Course",
+  "provider": "Hugging Face",
+  "url": "https://huggingface.co/learn/agents-course",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "Build AI agents with tools, planning and frameworks."
+ },
+ {
+  "title": "Deep Reinforcement Learning Course",
+  "provider": "Hugging Face",
+  "url": "https://huggingface.co/learn/deep-rl-course",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "From Q-learning to PPO, with hands-on environments."
+ },
+ {
+  "title": "Practical Deep Learning for Coders",
+  "provider": "fast.ai",
+  "url": "https://course.fast.ai/",
+  "topics": [
+   "ai",
+   "python"
+  ],
+  "certificate": "",
+  "headline": "Top-down, code-first deep learning used by thousands of practitioners."
+ },
+ {
+  "title": "Machine Learning Crash Course",
+  "provider": "Google",
+  "url": "https://developers.google.com/machine-learning/crash-course",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "Google's fast-paced intro to machine learning with exercises."
+ },
+ {
+  "title": "Google's Python Class",
+  "provider": "Google",
+  "url": "https://developers.google.com/edu/python",
+  "topics": [
+   "python"
+  ],
+  "certificate": "",
+  "headline": "Google's own Python course for people with a little programming experience."
+ },
+ {
+  "title": "Elements of AI",
+  "provider": "University of Helsinki",
+  "url": "https://www.elementsofai.com/",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "Free certificate",
+  "headline": "What AI is and isn't, no maths or coding needed."
+ },
+ {
+  "title": "Full Stack Open",
+  "provider": "University of Helsinki",
+  "url": "https://fullstackopen.com/en/",
+  "topics": [
+   "webdev"
+  ],
+  "certificate": "Free certificate",
+  "headline": "React, Node.js, GraphQL, TypeScript and testing, project based."
+ },
+ {
+  "title": "Free certifications: web, JavaScript, Python, data",
+  "provider": "freeCodeCamp",
+  "url": "https://www.freecodecamp.org/learn/",
+  "topics": [
+   "webdev",
+   "python",
+   "data"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Thousands of hours of lessons and projects, each path ending in a certification."
+ },
+ {
+  "title": "The Odin Project",
+  "provider": "The Odin Project",
+  "url": "https://www.theodinproject.com/",
+  "topics": [
+   "webdev"
+  ],
+  "certificate": "",
+  "headline": "Full web development curriculum, from HTML to full stack JavaScript or Rails."
+ },
+ {
+  "title": "Introduction to Computer Science and Programming in Python",
+  "provider": "MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+  "topics": [
+   "python"
+  ],
+  "certificate": "",
+  "headline": "MIT's 6.0001 lectures, notes and problem sets, free."
+ },
+ {
+  "title": "AWS Cloud Practitioner Essentials",
+  "provider": "AWS Skill Builder",
+  "url": "https://explore.skillbuilder.aws/learn/course/external/view/elearning/134/aws-cloud-practitioner-essentials",
+  "topics": [
+   "cloud"
+  ],
+  "certificate": "",
+  "headline": "AWS's official prep course for the Cloud Practitioner exam."
+ },
+ {
+  "title": "Python Essentials 1",
+  "provider": "Cisco Networking Academy",
+  "url": "https://www.netacad.com/courses/python-essentials-1",
+  "topics": [
+   "python"
+  ],
+  "certificate": "Free badge",
+  "headline": "Python basics with labs, aligned to the PCEP certification."
+ },
+ {
+  "title": "Introduction to Cybersecurity",
+  "provider": "Cisco Networking Academy",
+  "url": "https://www.netacad.com/courses/introduction-to-cybersecurity",
+  "topics": [
+   "cybersecurity"
+  ],
+  "certificate": "Free badge",
+  "headline": "How to stay safe online and what cybersecurity jobs involve."
+ },
+ {
+  "title": "IBM SkillsBuild: AI, cloud, data and cybersecurity",
+  "provider": "IBM",
+  "url": "https://skillsbuild.org/",
+  "topics": [
+   "ai",
+   "cloud",
+   "data",
+   "cybersecurity"
+  ],
+  "certificate": "Free badges",
+  "headline": "IBM's free courses with digital credentials, many aimed at students."
+ },
+ {
+  "title": "GitHub Skills",
+  "provider": "GitHub",
+  "url": "https://skills.github.com/",
+  "topics": [
+   "devops"
+  ],
+  "certificate": "",
+  "headline": "Interactive courses on Git, GitHub Actions, Copilot and more, inside GitHub."
+ },
+ {
+  "title": "MongoDB University",
+  "provider": "MongoDB",
+  "url": "https://learn.mongodb.com/",
+  "topics": [
+   "data",
+   "webdev"
+  ],
+  "certificate": "Free badges",
+  "headline": "Official MongoDB courses for developers and DBAs."
+ },
+ {
+  "title": "Introduction to Linux (LFS101)",
+  "provider": "Linux Foundation",
+  "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+  "topics": [
+   "linux",
+   "devops"
+  ],
+  "certificate": "",
+  "headline": "The Linux Foundation's free intro to Linux, on edX."
+ },
+ {
+  "title": "Short courses on generative AI",
+  "provider": "DeepLearning.AI",
+  "url": "https://www.deeplearning.ai/short-courses/",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "1-2 hour courses on LLMs, agents and RAG, taught with OpenAI, Google, Anthropic and others."
+ },
+ {
+  "title": "Machine Learning Specialization (audit free)",
+  "provider": "Stanford & DeepLearning.AI on Coursera",
+  "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "Free to audit; certificate paid",
+  "headline": "Andrew Ng's updated machine learning course."
+ },
+ {
+  "title": "Google Data Analytics (audit free)",
+  "provider": "Google on Coursera",
+  "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+  "topics": [
+   "data",
+   "excel"
+  ],
+  "certificate": "Free to audit; certificate paid",
+  "headline": "Spreadsheets, SQL, Tableau and R for entry-level analyst jobs."
+ },
+ {
+  "title": "Generative AI for Beginners",
+  "provider": "Microsoft",
+  "url": "https://github.com/microsoft/generative-ai-for-beginners",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "21 lessons on building generative AI apps."
+ },
+ {
+  "title": "Machine Learning for Beginners",
+  "provider": "Microsoft",
+  "url": "https://github.com/microsoft/ML-For-Beginners",
+  "topics": [
+   "ai",
+   "python"
+  ],
+  "certificate": "",
+  "headline": "12 weeks, 26 lessons of classic machine learning."
+ },
+ {
+  "title": "AI for Beginners",
+  "provider": "Microsoft",
+  "url": "https://github.com/microsoft/AI-For-Beginners",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "12 weeks, 24 lessons on AI, from neural networks to computer vision."
+ },
+ {
+  "title": "Web Development for Beginners",
+  "provider": "Microsoft",
+  "url": "https://github.com/microsoft/Web-Dev-For-Beginners",
+  "topics": [
+   "webdev"
+  ],
+  "certificate": "",
+  "headline": "12 weeks, 24 lessons of HTML, CSS and JavaScript projects."
+ },
+ {
+  "title": "Anthropic courses: prompt engineering and the Claude API",
+  "provider": "Anthropic",
+  "url": "https://github.com/anthropics/courses",
+  "topics": [
+   "ai"
+  ],
+  "certificate": "",
+  "headline": "Hands-on notebooks on prompting, tool use and building with LLMs."
+ },
+ {
+  "title": "SQLBolt",
+  "provider": "SQLBolt",
+  "url": "https://sqlbolt.com/",
+  "topics": [
+   "data"
+  ],
+  "certificate": "",
+  "headline": "Interactive SQL lessons right in the browser."
+ },
+ {
+  "title": "Infosys Springboard",
+  "provider": "Infosys",
+  "url": "https://infyspringboard.onwingspan.com/",
+  "topics": [
+   "python",
+   "ai",
+   "cloud",
+   "webdev",
+   "interview"
+  ],
+  "certificate": "Free certificate",
+  "headline": "Infosys's free learning platform with certificates, popular with Indian students."
+ },
+ {
+  "title": "NPTEL courses from IITs and IISc",
+  "provider": "NPTEL",
+  "url": "https://nptel.ac.in/courses",
+  "topics": [
+   "python",
+   "ai",
+   "data",
+   "cloud"
+  ],
+  "certificate": "Free to learn; exam fee for certificate",
+  "headline": "Full university courses from India's top institutes."
+ }
+]

@@ -3,12 +3,18 @@ from dataclasses import asdict, dataclass, field
 
 @dataclass
 class Course:
-    """One Udemy course + coupon, filled in step by step: source -> verify -> filter."""
+    """One course, filled in step by step: source -> verify -> filter.
+
+    kind "coupon" = a paid Udemy course made free by a coupon (price is checked on Udemy).
+    kind "free"   = a course that is always free (Microsoft Learn, YouTube, the curated catalog)."""
 
     url: str
     coupon: str = ""
     title: str = ""
     source: str = ""
+    kind: str = "coupon"
+    provider: str = "Udemy"
+    certificate: str = ""  # e.g. "Free certificate"; empty when none or unknown
     # Filled in by the Udemy check.
     course_id: int | None = None
     headline: str = ""
@@ -31,6 +37,8 @@ class Course:
 
     @property
     def is_free(self) -> bool:
+        if self.kind == "free":
+            return True
         return self.price is not None and self.price == 0
 
     def to_dict(self) -> dict:

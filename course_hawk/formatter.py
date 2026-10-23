@@ -25,7 +25,27 @@ def _money(amount: float, currency: str) -> str:
     return f"{symbol}{amount:,.0f}"
 
 
+def format_free_post(course: Course) -> str:
+    facts = [f"🏫 {escape(course.provider)}"]
+    if course.hours:
+        facts.append(f"⏱ {course.hours:g}h")
+    if course.certificate:
+        facts.append(f"🎖 {escape(course.certificate)}")
+    lines = [f"🎓 <b>{escape(course.title)}</b>", " · ".join(facts), "💰 FREE"]
+    if course.headline:
+        lines += ["", escape(course.headline)]
+    lines += ["", f'👉 <a href="{escape(course.url)}">Start learning</a>']
+    lines += ["", " ".join(f"#{t}" for t in course.topics) + " #" + _tag(course.provider)]
+    return "\n".join(lines).rstrip()
+
+
+def _tag(provider: str) -> str:
+    return "".join(ch for ch in provider.split("(")[0].split(" on ")[0].lower() if ch.isalnum())
+
+
 def format_post(course: Course, expired: bool = False) -> str:
+    if course.kind == "free":
+        return format_free_post(course)
     stats = [f"⭐ {course.rating:.1f} ({_count(course.num_reviews)} ratings)" if course.num_reviews
              else f"⭐ {course.rating:.1f}"]
     if course.students:
@@ -45,7 +65,7 @@ def format_post(course: Course, expired: bool = False) -> str:
         lines.append("❌ <b>EXPIRED</b> — this coupon has ended\n")
     lines += [
         f"🎓 <b>{escape(course.title)}</b>",
-        " · ".join(stats),
+        "🏫 Udemy · " + " · ".join(stats),
         price,
     ]
     if course.headline:
