@@ -181,7 +181,9 @@ def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     missing = [n for n in ("BOT_TOKEN", "CHANNEL", "ADMIN_CHAT_ID") if not getattr(config, n)]
     if missing and not config.DRY_RUN:
-        raise SystemExit(f"missing settings: {', '.join(missing)}")
+        # Not set up yet: exit quietly so the schedule doesn't fail every 15 minutes.
+        log.warning("not configured, skipping run; missing: %s", ", ".join(missing))
+        return
     state = State(config.STATE_FILE)
     at = now()
     steps = [("updates", lambda: handle_updates(state)), ("post", lambda: post_slot(state, at)),
