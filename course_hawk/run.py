@@ -134,10 +134,15 @@ def post_slot(state: State, at: datetime) -> None:
         return
     queue = sorted(state.data["queue"], key=lambda e: -score(State.course(e)))
     posted = 0
-    while queue and posted < config.SLOTS[slot]:
-        entry = queue.pop(0)
-        if post_to_channel(state, State.course(entry)):
-            posted += 1
+    try:
+        while queue and posted < config.SLOTS[slot]:
+            entry = queue.pop(0)
+            if post_to_channel(state, State.course(entry)):
+                posted += 1
+    except Exception:
+        if not posted:  # e.g. the channel is misconfigured: keep the slot and the queue for the next run
+            state.data["slots_done"].pop(f"{at.astimezone(IST):%Y-%m-%d} post {slot}", None)
+            raise
     state.data["queue"] = queue
 
 

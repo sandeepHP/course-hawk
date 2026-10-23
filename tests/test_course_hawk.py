@@ -380,3 +380,16 @@ def test_empty_queue_keeps_slot_open(env, monkeypatch):
     env.data["queue"].append({"course": good_course().to_dict(), "preview_id": 7})
     run.post_slot(env, datetime.fromisoformat("2026-10-23T08:20:00+05:30"))
     assert fake.sent and fake.sent[-1][0] == "@chan"
+
+
+def test_failed_post_keeps_slot_and_queue(env, monkeypatch):
+    env.data["queue"].append({"course": good_course().to_dict(), "preview_id": 7})
+    monkeypatch.setattr(run.udemy, "verify", lambda c: c)
+    class Broken(FakeTelegram):
+        def send(self, chat, text, buttons=None):
+            raise RuntimeError("telegram sendMessage: Bad Request: chat not found")
+    monkeypatch.setattr(run, "telegram", Broken())
+    at = datetime.fromisoformat("2026-10-23T08:05:00+05:30")
+    with pytest.raises(RuntimeError):
+        run.post_slot(env, at)
+    assert len(env.data["queue"]) == 1 and not env.data["slots_done"]
