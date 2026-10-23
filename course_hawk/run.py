@@ -5,6 +5,7 @@ Runs every 15 minutes on GitHub Actions. Each step is safe to skip or repeat."""
 import argparse
 import logging
 import random
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 
 from . import config, free_sources, telegram, udemy
@@ -166,7 +167,7 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
     def fresh(course: Course, days: int = config.DEDUPE_DAYS) -> bool:
         return course.key not in known and not state.seen_recently(course.key, days)
 
-    coupons = []
+    coupons, reasons = [], Counter()
     try:
         found = scan_feeds()
     except Exception:
@@ -181,6 +182,7 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
         reason = reject_reason(course, filters)
         if reason:
             log.info("rejected %s: %s", course.title, reason)
+            reasons[reason.split(" ")[0]] += 1
             continue
         coupons.append(course)
         known.add(course.key)
@@ -209,7 +211,7 @@ def scan(state: State, at: datetime, force: bool = False) -> None:
         preview_id = telegram.send(config.ADMIN_CHAT_ID, format_post(course), buttons=preview_buttons(course.key))
         state.data["pending"][course.key] = {"course": course.to_dict(), "preview_id": preview_id}
         state.mark_seen(course.key)
-    log.info("scan: %d coupon and %d free previews", len(coupons), len(free))
+    log.info("scan: %d coupon and %d free previews; coupons rejected: %s", len(coupons), len(free), dict(reasons))
 
 
 def main() -> None:

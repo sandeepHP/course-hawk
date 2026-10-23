@@ -1,3 +1,4 @@
+import hashlib
 from dataclasses import asdict, dataclass, field
 
 
@@ -33,7 +34,10 @@ class Course:
 
     @property
     def key(self) -> str:
-        return str(self.course_id) if self.course_id else self.url.split("?")[0].rstrip("/")
+        if self.course_id:
+            return str(self.course_id)
+        # Short and stable: Telegram button data is limited to 64 bytes.
+        return "u" + hashlib.sha1(self.url.split("?")[0].rstrip("/").encode()).hexdigest()[:12]
 
     @property
     def is_free(self) -> bool:

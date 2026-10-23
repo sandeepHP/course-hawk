@@ -362,3 +362,11 @@ def test_recheck_skips_free(env, monkeypatch):
                                "checked_at": old, "expired": False})
     monkeypatch.setattr(run.udemy, "verify", lambda c: pytest.fail("free courses are not price checked"))
     run.recheck_posted(env)
+
+
+def test_keys_fit_telegram_button_data():
+    long_url = "https://www.coursera.org/professional-certificates/google-data-analytics-and-more-words-here"
+    for c in (free_course(url=long_url), good_course(), good_course(course_id=None)):
+        for b in sum(run.preview_buttons(c.key), []):
+            assert len(b["callback_data"].encode()) <= 64
+    assert free_course(url=long_url).key == free_course(url=long_url + "?x=1").key
