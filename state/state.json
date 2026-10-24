@@ -30,6 +30,34 @@
    },
    "preview_id": 9
   },
+  "u5ad969e58732": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Get started with web development using ASP.NET Core. In this beginner-friendly pathway, you'll learn the basics of C#, HTML, Razor Pages, and more!",
+    "hours": 3.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-21",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Build web apps with ASP.NET Core for beginners",
+    "topics": [
+     "webdev"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/aspnet-core-web-app/"
+   },
+   "preview_id": 19
+  },
   "u70dca3ac0523": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -88,11 +116,97 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/windows-11-pro-accreditation-2026/"
    },
    "preview_id": 6
+  },
+  "ue2519171ae01": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "The Linux Foundation's free intro to Linux, on edX.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Linux Foundation",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Introduction to Linux (LFS101)",
+    "topics": [
+     "linux",
+     "devops"
+    ],
+    "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux"
+   },
+   "preview_id": 21
+  },
+  "uf9c68335a743": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Django, JavaScript, SQL and building real web apps.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Harvard University",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "CS50 Web Programming with Python and JavaScript",
+    "topics": [
+     "webdev",
+     "python"
+    ],
+    "url": "https://cs50.harvard.edu/web/"
+   },
+   "preview_id": 20
+  },
+  "ufa1f1985cceb": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Data is key to most business operations and services and an understanding of data is essential in many roles. This learning path covers data concepts, data analytics, and data roles, services, and products.",
+    "hours": 1.6,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-21",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Understand data concepts",
+    "topics": [
+     "data"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/understand-data-concepts/"
+   },
+   "preview_id": 18
   }
  },
  "posted": [
   {
-   "checked_at": "2026-10-24T01:42:07.754265+00:00",
+   "checked_at": "2026-10-24T06:33:25.115602+00:00",
    "course": {
     "certificate": "",
     "coupon": "C11E7F7151185CF49E67",
@@ -159,10 +273,16 @@
   "6871029": "2026-10-23T16:04:40.308795+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "u39ccd71a8e31": "2026-10-23T16:11:55.633314+00:00",
+  "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
   "u70dca3ac0523": "2026-10-23T16:11:54.648286+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
-  "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00"
+  "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
+  "ue2519171ae01": "2026-10-24T06:39:15.977742+00:00",
+  "uf9c68335a743": "2026-10-24T06:39:15.427068+00:00",
+  "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
- "slots_done": {},
+ "slots_done": {
+  "2026-10-24 preview 12:00": true
+ },
  "update_offset": 543331545
 }
