@@ -1,5 +1,33 @@
 {
  "pending": {
+  "u38e095b6f47a": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn to secure, manage, and monitor endpoints using Microsoft Intune, Microsoft Defender for Endpoint, and Microsoft Security Copilot. This path covers device onboarding, policy enforcement, compliance, threat protection, and AI-powered incident response for modern organizations. (MD-4011)",
+    "hours": 4.5,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-21",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Enhance endpoint security with Microsoft Intune and Microsoft Security Copilot",
+    "topics": [
+     "cybersecurity"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/enhance-endpoint-security-microsoft-intune-copilot/"
+   },
+   "preview_id": 22
+  },
   "u39ccd71a8e31": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -87,6 +115,34 @@
    },
    "preview_id": 7
   },
+  "u774f7412d1a3": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how to use Google's Gemini 4 Argon model through practical JavaScript examples. This course walks through key development topics including API key setup, sending basic API requests, adjusting mo",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-23",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "freeCodeCamp (YouTube)",
+    "rating": 0.0,
+    "source": "youtube",
+    "students": 0,
+    "title": "Gemini 4 Argon API Crash Course",
+    "topics": [
+     "webdev"
+    ],
+    "url": "https://www.youtube.com/watch?v=JGly6PSK5iw"
+   },
+   "preview_id": 24
+  },
   "u8b939a93c42e": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -116,6 +172,34 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/windows-11-pro-accreditation-2026/"
    },
    "preview_id": 6
+  },
+  "ubde91177a4bf": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how Microsoft AI (MAI) models work and how to use them in your applications.",
+    "hours": 2.6,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-21",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Introduction to Microsoft AI models",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-ai/"
+   },
+   "preview_id": 23
   },
   "ue2519171ae01": {
    "course": {
@@ -206,7 +290,7 @@
  },
  "posted": [
   {
-   "checked_at": "2026-10-24T06:33:25.115602+00:00",
+   "checked_at": "2026-10-24T11:32:05.907521+00:00",
    "course": {
     "certificate": "",
     "coupon": "C11E7F7151185CF49E67",
@@ -272,17 +356,21 @@
  "seen": {
   "6871029": "2026-10-23T16:04:40.308795+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
+  "u38e095b6f47a": "2026-10-24T11:37:58.363529+00:00",
   "u39ccd71a8e31": "2026-10-23T16:11:55.633314+00:00",
   "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
   "u70dca3ac0523": "2026-10-23T16:11:54.648286+00:00",
+  "u774f7412d1a3": "2026-10-24T11:37:59.577576+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
+  "ubde91177a4bf": "2026-10-24T11:37:58.967326+00:00",
   "ue2519171ae01": "2026-10-24T06:39:15.977742+00:00",
   "uf9c68335a743": "2026-10-24T06:39:15.427068+00:00",
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-10-24 preview 12:00": true
+  "2026-10-24 preview 12:00": true,
+  "2026-10-24 preview 17:00": true
  },
  "update_offset": 543331545
 }
