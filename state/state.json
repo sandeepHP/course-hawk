@@ -56,6 +56,63 @@
    },
    "preview_id": 26
   },
+  "u2bb3d224f718": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "In this learning path, you prepare for the Applied Skill, Deploy and administer Linux virtual machines on Microsoft Azure. (AZ-1007)",
+    "hours": 5.3,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Deploy and administer Linux virtual machines on Azure",
+    "topics": [
+     "cloud",
+     "linux"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/deploy-administer-linux-virtual-machines-azure/"
+   },
+   "preview_id": 30
+  },
+  "u31d8227ee160": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Short hands-on Python course in the browser, no setup needed.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Kaggle Learn",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Python",
+    "topics": [
+     "python"
+    ],
+    "url": "https://www.kaggle.com/learn/python"
+   },
+   "preview_id": 33
+  },
   "u38e095b6f47a": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -199,6 +256,34 @@
    },
    "preview_id": 24
   },
+  "u7aed151ccaa3": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Google's own Python course for people with a little programming experience.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Google",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Google's Python Class",
+    "topics": [
+     "python"
+    ],
+    "url": "https://developers.google.com/edu/python"
+   },
+   "preview_id": 32
+  },
   "u8b939a93c42e": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -256,6 +341,35 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-ai/"
    },
    "preview_id": 23
+  },
+  "ubfc348073028": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Design and implement a replication strategy for Azure Cosmos DB for NoSQL",
+    "hours": 1.9,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Design and implement a replication strategy for Azure Cosmos DB for NoSQL",
+    "topics": [
+     "data",
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/design-implement-replication-strategy-cosmos-db-sql-api/"
+   },
+   "preview_id": 31
   },
   "uc2cf46c8f4d7": {
    "course": {
@@ -498,14 +612,18 @@
   "6978899": "2026-11-02T02:29:02.778932+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
+  "u2bb3d224f718": "2026-11-04T02:35:25.297451+00:00",
+  "u31d8227ee160": "2026-11-04T02:35:26.991910+00:00",
   "u38e095b6f47a": "2026-10-24T11:37:58.363529+00:00",
   "u39ccd71a8e31": "2026-10-23T16:11:55.633314+00:00",
   "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
   "u70dca3ac0523": "2026-10-23T16:11:54.648286+00:00",
   "u774f7412d1a3": "2026-10-24T11:37:59.577576+00:00",
+  "u7aed151ccaa3": "2026-11-04T02:35:26.443044+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
   "ubde91177a4bf": "2026-10-24T11:37:58.967326+00:00",
+  "ubfc348073028": "2026-11-04T02:35:25.869824+00:00",
   "uc2cf46c8f4d7": "2026-11-02T02:29:03.850962+00:00",
   "uc40daf7cc775": "2026-11-02T02:29:04.909941+00:00",
   "ue2519171ae01": "2026-10-24T06:39:15.977742+00:00",
@@ -514,7 +632,8 @@
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-11-02 preview 07:30": true
+  "2026-11-02 preview 07:30": true,
+  "2026-11-04 preview 07:30": true
  },
  "update_offset": 543331545
 }
