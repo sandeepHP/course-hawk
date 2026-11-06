@@ -1,5 +1,61 @@
 {
  "pending": {
+  "6615885": {
+   "course": {
+    "certificate": "",
+    "coupon": "PAPAHR_NOV_098126",
+    "course_id": 6615885,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Launch and grow faster: product marketing, brand positioning, digital channels, customer service, RevOps, AI prompts",
+    "hours": 25.5,
+    "instructor": "PapaHR ★ 175K students: Human Resources, HR Management, SHRM, AI Analytics, Recruitment, Payroll, Certification, CIPD, Claude",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-10-26",
+    "list_price": 19.99,
+    "num_reviews": 7,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 5.0,
+    "source": "discudemy",
+    "students": 3138,
+    "title": "Go-to-Market Strategy: Product, Brand, Sales, 590 Tools",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/chief-sales-officer-b2b-b2c/"
+   },
+   "preview_id": 34
+  },
+  "6627435": {
+   "course": {
+    "certificate": "",
+    "coupon": "PAPAHR_NOV_630328",
+    "course_id": 6627435,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "The interviewer is filling a form you never saw? Project manager interview: PMBOK, STAR answers, scorecards, cases",
+    "hours": 16.5,
+    "instructor": "PapaHR ★ 175K students: Human Resources, HR Management, SHRM, AI Analytics, Recruitment, Payroll, Certification, CIPD, Claude",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-10-26",
+    "list_price": 19.99,
+    "num_reviews": 4,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 5.0,
+    "source": "discudemy",
+    "students": 3060,
+    "title": "Project Manager Interview: Beat the Scorecard, 320+ Tools",
+    "topics": [
+     "interview"
+    ],
+    "url": "https://www.udemy.com/course/linkedin-boolean-x-ray-ai/"
+   },
+   "preview_id": 35
+  },
   "6978899": {
    "course": {
     "certificate": "",
@@ -55,6 +111,64 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/deploy-operate-security-copilot/"
    },
    "preview_id": 26
+  },
+  "u1abca2577c27": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Clean, reshape and analyse data with pandas.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Kaggle Learn",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Pandas",
+    "topics": [
+     "python",
+     "data"
+    ],
+    "url": "https://www.kaggle.com/learn/pandas"
+   },
+   "preview_id": 38
+  },
+  "u2911da51adf2": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Search, knowledge, uncertainty, neural networks and language models, in Python.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Harvard University",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "CS50 AI: Introduction to Artificial Intelligence with Python",
+    "topics": [
+     "ai",
+     "python"
+    ],
+    "url": "https://cs50.harvard.edu/ai/"
+   },
+   "preview_id": 39
   },
   "u2bb3d224f718": {
    "course": {
@@ -313,6 +427,63 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/windows-11-pro-accreditation-2026/"
    },
    "preview_id": 6
+  },
+  "u92bcaffbfb6e": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "AZ-700 Design and Implement Microsoft Azure Network Solutions",
+    "hours": 6.5,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "AZ-700 Design and Implement Microsoft Azure Network Solutions",
+    "topics": [
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/design-implement-microsoft-azure-networking-solutions-az-700/"
+   },
+   "preview_id": 37
+  },
+  "ub54df125eff2": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Get started with Azure Cosmos DB for NoSQL",
+    "hours": 0.9,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Get started with Azure Cosmos DB for NoSQL",
+    "topics": [
+     "data",
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/get-started-azure-cosmos-db-sql-api/"
+   },
+   "preview_id": 36
   },
   "ubde91177a4bf": {
    "course": {
@@ -608,10 +779,14 @@
  ],
  "queue": [],
  "seen": {
+  "6615885": "2026-11-06T11:43:28.007760+00:00",
+  "6627435": "2026-11-06T11:43:28.703890+00:00",
   "6871029": "2026-10-23T16:04:40.308795+00:00",
   "6978899": "2026-11-02T02:29:02.778932+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
+  "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
+  "u2911da51adf2": "2026-11-06T11:43:32.691047+00:00",
   "u2bb3d224f718": "2026-11-04T02:35:25.297451+00:00",
   "u31d8227ee160": "2026-11-04T02:35:26.991910+00:00",
   "u38e095b6f47a": "2026-10-24T11:37:58.363529+00:00",
@@ -622,6 +797,8 @@
   "u7aed151ccaa3": "2026-11-04T02:35:26.443044+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
+  "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
+  "ub54df125eff2": "2026-11-06T11:43:29.397292+00:00",
   "ubde91177a4bf": "2026-10-24T11:37:58.967326+00:00",
   "ubfc348073028": "2026-11-04T02:35:25.869824+00:00",
   "uc2cf46c8f4d7": "2026-11-02T02:29:03.850962+00:00",
@@ -632,7 +809,8 @@
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-11-04 preview 07:30": true
+  "2026-11-04 preview 07:30": true,
+  "2026-11-06 preview 17:00": true
  },
  "update_offset": 543331545
 }
