@@ -84,6 +84,34 @@
    },
    "preview_id": 25
   },
+  "7226295": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE03",
+    "course_id": 7226295,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Turn AI policies into practical governance, controls, accountability, risk management, and business results.",
+    "hours": 18.5,
+    "instructor": "School of AI",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-06-22",
+    "list_price": 39.99,
+    "num_reviews": 1,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 5.0,
+    "source": "discudemy",
+    "students": 1467,
+    "title": "AI Governance for Business Leaders: Policy to Practice",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/ai-governance-for-business-leaders-policy-to-practice/"
+   },
+   "preview_id": 40
+  },
   "u12df0e68f90c": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -140,6 +168,36 @@
     "url": "https://www.kaggle.com/learn/pandas"
    },
    "preview_id": 38
+  },
+  "u21fa6f3a1d07": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how to develop AI solutions using Azure Database for PostgreSQL, including vector search with pgvector for RAG pipelines and semantic retrieval.",
+    "hours": 4.9,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Develop AI solutions with Azure Database for PostgreSQL",
+    "topics": [
+     "ai",
+     "data",
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-database-postgresql/"
+   },
+   "preview_id": 42
   },
   "u2911da51adf2": {
    "course": {
@@ -456,6 +514,35 @@
    },
    "preview_id": 37
   },
+  "ub1b51e824b2f": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how to integrate backend services for AI solutions on Azure.",
+    "hours": 5.7,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Integrate backend services for AI solutions",
+    "topics": [
+     "ai",
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/integrate-backend-services-ai-solutions/"
+   },
+   "preview_id": 41
+  },
   "ub54df125eff2": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -598,6 +685,37 @@
    },
    "preview_id": 29
   },
+  "ud77a6ddbcd7d": {
+   "course": {
+    "certificate": "Free badges",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "IBM's free courses with digital credentials, many aimed at students.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "IBM",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "IBM SkillsBuild: AI, cloud, data and cybersecurity",
+    "topics": [
+     "ai",
+     "cloud",
+     "data",
+     "cybersecurity"
+    ],
+    "url": "https://skillsbuild.org/"
+   },
+   "preview_id": 43
+  },
   "ue2519171ae01": {
    "course": {
     "certificate": "",
@@ -626,6 +744,38 @@
     "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux"
    },
    "preview_id": 21
+  },
+  "uedd501a0928d": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Infosys's free learning platform with certificates, popular with Indian students.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Infosys",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Infosys Springboard",
+    "topics": [
+     "python",
+     "ai",
+     "cloud",
+     "webdev",
+     "interview"
+    ],
+    "url": "https://infyspringboard.onwingspan.com/"
+   },
+   "preview_id": 44
   },
   "uf36a7ac14933": {
    "course": {
@@ -784,8 +934,10 @@
   "6871029": "2026-10-23T16:04:40.308795+00:00",
   "6978899": "2026-11-02T02:29:02.778932+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
+  "7226295": "2026-11-10T02:21:44.441240+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
   "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
+  "u21fa6f3a1d07": "2026-11-10T02:21:45.384622+00:00",
   "u2911da51adf2": "2026-11-06T11:43:32.691047+00:00",
   "u2bb3d224f718": "2026-11-04T02:35:25.297451+00:00",
   "u31d8227ee160": "2026-11-04T02:35:26.991910+00:00",
@@ -798,18 +950,21 @@
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
   "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
+  "ub1b51e824b2f": "2026-11-10T02:21:44.911386+00:00",
   "ub54df125eff2": "2026-11-06T11:43:29.397292+00:00",
   "ubde91177a4bf": "2026-10-24T11:37:58.967326+00:00",
   "ubfc348073028": "2026-11-04T02:35:25.869824+00:00",
   "uc2cf46c8f4d7": "2026-11-02T02:29:03.850962+00:00",
   "uc40daf7cc775": "2026-11-02T02:29:04.909941+00:00",
+  "ud77a6ddbcd7d": "2026-11-10T02:21:45.855387+00:00",
   "ue2519171ae01": "2026-10-24T06:39:15.977742+00:00",
+  "uedd501a0928d": "2026-11-10T02:21:46.485128+00:00",
   "uf36a7ac14933": "2026-11-02T02:29:04.383804+00:00",
   "uf9c68335a743": "2026-10-24T06:39:15.427068+00:00",
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-11-06 preview 17:00": true
+  "2026-11-10 preview 07:30": true
  },
  "update_offset": 543331545
 }
