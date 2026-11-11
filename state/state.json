@@ -56,6 +56,62 @@
    },
    "preview_id": 35
   },
+  "6929045": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 6929045,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Hands-on deep learning for brain–computer interfaces using EEGNet and real motor imagery EEG data",
+    "hours": 6.0,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2025-12-06",
+    "list_price": 19.99,
+    "num_reviews": 20,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.175,
+    "source": "onlinecourses_ooo",
+    "students": 7587,
+    "title": "Coding the Brain: AI & Machine Learning for BCIs",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/coding-the-brain-ai-machine-learning-for-bcis/"
+   },
+   "preview_id": 45
+  },
+  "6956873": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 6956873,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Learn to analyze neural signals using machine learning and deep learning techniques",
+    "hours": 4.5,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-01-02",
+    "list_price": 19.99,
+    "num_reviews": 19,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.131579,
+    "source": "onlinecourses_ooo",
+    "students": 5578,
+    "title": "Neural Signal Processing & Applied AI",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/neural-signal-processing-applied-ai/"
+   },
+   "preview_id": 50
+  },
   "6978899": {
    "course": {
     "certificate": "",
@@ -83,6 +139,121 @@
     "url": "https://www.udemy.com/course/ai-agents-copilot-studio-azure-foundry-microsoft-foundry/"
    },
    "preview_id": 25
+  },
+  "7031585": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 7031585,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Design, scale, and govern autonomous AI agents for real-world enterprise systems",
+    "hours": 4.5,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-03",
+    "list_price": 19.99,
+    "num_reviews": 11,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.2272725,
+    "source": "onlinecourses_ooo",
+    "students": 4799,
+    "title": "AgenticOps: Designing AI-Native Autonomous Systems",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/agenticops-designing-ai-native-autonomous-systems/"
+   },
+   "preview_id": 49
+  },
+  "7043981": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE01",
+    "course_id": 7043981,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Design, deploy, and govern secure, compliant AI systems used in real enterprises",
+    "hours": 4.0,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-16",
+    "list_price": 19.99,
+    "num_reviews": 103,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.262712,
+    "source": "onlinecourses_ooo",
+    "students": 5624,
+    "title": "AI Security, Governance & Compliance",
+    "topics": [
+     "ai",
+     "cybersecurity"
+    ],
+    "url": "https://www.udemy.com/course/ai-security-governance-compliance/"
+   },
+   "preview_id": 47
+  },
+  "7047765": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 7047765,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Build autonomous, secure AI systems for cloud, network, and enterprise defense",
+    "hours": 8.5,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-16",
+    "list_price": 19.99,
+    "num_reviews": 17,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.2352943,
+    "source": "onlinecourses_ooo",
+    "students": 5141,
+    "title": "AI-Driven Cybersecurity Automation",
+    "topics": [
+     "ai",
+     "cloud",
+     "cybersecurity"
+    ],
+    "url": "https://www.udemy.com/course/ai-driven-cybersecurity-automation/"
+   },
+   "preview_id": 48
+  },
+  "7062055": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 7062055,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Design AI-powered teams, delegation systems, governance frameworks, and scalable autonomous execution architectures",
+    "hours": 6.5,
+    "instructor": "Data Science Academy",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-21",
+    "list_price": 19.99,
+    "num_reviews": 4,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.5,
+    "source": "onlinecourses_ooo",
+    "students": 3924,
+    "title": "AI Operating Systems: Designing Autonomous Architectures",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/ai-operating-systems-designing-autonomous-architectures/"
+   },
+   "preview_id": 46
   },
   "7226295": {
    "course": {
@@ -343,6 +514,34 @@
    },
    "preview_id": 9
   },
+  "u4afeb19d24cb": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how Bicep enables you to manage infrastructure deployments on Azure.",
+    "hours": 2.3,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Fundamentals of Bicep",
+    "topics": [
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/"
+   },
+   "preview_id": 51
+  },
   "u5ad969e58732": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -399,6 +598,62 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/observe-troubleshoot-apps/"
    },
    "preview_id": 7
+  },
+  "u70ff0dc43714": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Interactive courses on Git, GitHub Actions, Copilot and more, inside GitHub.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "GitHub",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "GitHub Skills",
+    "topics": [
+     "devops"
+    ],
+    "url": "https://skills.github.com/"
+   },
+   "preview_id": 54
+  },
+  "u72d021d95e1f": {
+   "course": {
+    "certificate": "Free badge",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "How to stay safe online and what cybersecurity jobs involve.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Cisco Networking Academy",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Introduction to Cybersecurity",
+    "topics": [
+     "cybersecurity"
+    ],
+    "url": "https://www.netacad.com/courses/introduction-to-cybersecurity"
+   },
+   "preview_id": 53
   },
   "u774f7412d1a3": {
    "course": {
@@ -542,6 +797,36 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/integrate-backend-services-ai-solutions/"
    },
    "preview_id": 41
+  },
+  "ub34f5008e8cd": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Implement a defense-in-depth security strategy for AI workloads across Microsoft's AI platform. Configure data security posture management in Microsoft Purview, secure agent identities in Microsoft Entra, and analyze AI identity risks in Microsoft Defender XDR. Then, enable real-time agent protection in Microsoft Defender, configure AI Gateway security in Microsoft Foundry, manage guardrails, protect AI workloads with Defender for Cloud, and govern agents with Microsoft Agent 365.",
+    "hours": 4.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-10-28",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Implement security for AI",
+    "topics": [
+     "ai",
+     "cloud",
+     "cybersecurity"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/implement-ai-security/"
+   },
+   "preview_id": 52
   },
   "ub54df125eff2": {
    "course": {
@@ -932,7 +1217,13 @@
   "6615885": "2026-11-06T11:43:28.007760+00:00",
   "6627435": "2026-11-06T11:43:28.703890+00:00",
   "6871029": "2026-10-23T16:04:40.308795+00:00",
+  "6929045": "2026-11-11T02:19:39.519487+00:00",
+  "6956873": "2026-11-11T02:19:41.861101+00:00",
   "6978899": "2026-11-02T02:29:02.778932+00:00",
+  "7031585": "2026-11-11T02:19:41.400568+00:00",
+  "7043981": "2026-11-11T02:19:40.454324+00:00",
+  "7047765": "2026-11-11T02:19:40.919937+00:00",
+  "7062055": "2026-11-11T02:19:39.973123+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "7226295": "2026-11-10T02:21:44.441240+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
@@ -943,14 +1234,18 @@
   "u31d8227ee160": "2026-11-04T02:35:26.991910+00:00",
   "u38e095b6f47a": "2026-10-24T11:37:58.363529+00:00",
   "u39ccd71a8e31": "2026-10-23T16:11:55.633314+00:00",
+  "u4afeb19d24cb": "2026-11-11T02:19:42.391253+00:00",
   "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
   "u70dca3ac0523": "2026-10-23T16:11:54.648286+00:00",
+  "u70ff0dc43714": "2026-11-11T02:19:43.770032+00:00",
+  "u72d021d95e1f": "2026-11-11T02:19:43.308093+00:00",
   "u774f7412d1a3": "2026-10-24T11:37:59.577576+00:00",
   "u7aed151ccaa3": "2026-11-04T02:35:26.443044+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
   "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
   "ub1b51e824b2f": "2026-11-10T02:21:44.911386+00:00",
+  "ub34f5008e8cd": "2026-11-11T02:19:42.848303+00:00",
   "ub54df125eff2": "2026-11-06T11:43:29.397292+00:00",
   "ubde91177a4bf": "2026-10-24T11:37:58.967326+00:00",
   "ubfc348073028": "2026-11-04T02:35:25.869824+00:00",
@@ -964,7 +1259,8 @@
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-11-10 preview 07:30": true
+  "2026-11-10 preview 07:30": true,
+  "2026-11-11 preview 07:30": true
  },
  "update_offset": 543331545
 }
