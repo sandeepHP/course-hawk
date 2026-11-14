@@ -311,6 +311,35 @@
    },
    "preview_id": 40
   },
+  "7275115": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE01",
+    "course_id": 7275115,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Build secure, compliant, and responsible AI systems with practical governance, risk, privacy, and enterprise controls.",
+    "hours": 1.5,
+    "instructor": "School of AI",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-08-01",
+    "list_price": 39.99,
+    "num_reviews": 2,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 5.0,
+    "source": "discudemy",
+    "students": 1089,
+    "title": "AI Governance and Security",
+    "topics": [
+     "ai",
+     "cybersecurity"
+    ],
+    "url": "https://www.udemy.com/course/ai-governance-and-security/"
+   },
+   "preview_id": 60
+  },
   "u12df0e68f90c": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -1171,6 +1200,34 @@
    },
    "preview_id": 21
   },
+  "ue647496b03be": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn the full GenAIOps lifecycle for generative AI applications, from planning and prompt management to evaluation, model fine-tuning with managed training, automated testing, monitoring, and tracing in production.",
+    "hours": 7.6,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-05",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Operationalize generative AI applications (GenAIOps)",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/operationalize-gen-ai-apps/"
+   },
+   "preview_id": 62
+  },
   "uedd501a0928d": {
    "course": {
     "certificate": "Free certificate",
@@ -1259,6 +1316,34 @@
     "url": "https://cs50.harvard.edu/web/"
    },
    "preview_id": 20
+  },
+  "uf9f36bff2f6d": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Explore digital sovereignty and Microsoft Sovereign Cloud, then learn how Azure Policy initiatives, key and certificate management, and confidential computing support sovereignty requirements.",
+    "hours": 3.8,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-10",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Get started with Microsoft Sovereign Cloud",
+    "topics": [
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/get-started-sovereignty/"
+   },
+   "preview_id": 61
   },
   "ufa1f1985cceb": {
    "course": {
@@ -1368,6 +1453,7 @@
   "7062055": "2026-11-11T02:19:39.973123+00:00",
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "7226295": "2026-11-10T02:21:44.441240+00:00",
+  "7275115": "2026-11-14T16:00:34.286158+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
   "u17d6aefdaa68": "2026-11-14T02:36:21.001152+00:00",
   "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
@@ -1399,14 +1485,17 @@
   "uc40daf7cc775": "2026-11-02T02:29:04.909941+00:00",
   "ud77a6ddbcd7d": "2026-11-10T02:21:45.855387+00:00",
   "ue2519171ae01": "2026-10-24T06:39:15.977742+00:00",
+  "ue647496b03be": "2026-11-14T16:00:35.525021+00:00",
   "uedd501a0928d": "2026-11-10T02:21:46.485128+00:00",
   "uf36a7ac14933": "2026-11-02T02:29:04.383804+00:00",
   "uf9c68335a743": "2026-10-24T06:39:15.427068+00:00",
+  "uf9f36bff2f6d": "2026-11-14T16:00:34.990611+00:00",
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
   "2026-11-11 preview 07:30": true,
-  "2026-11-14 preview 07:30": true
+  "2026-11-14 preview 07:30": true,
+  "2026-11-14 preview 21:00": true
  },
  "update_offset": 543331545
 }
