@@ -1,5 +1,33 @@
 {
  "pending": {
+  "6613447": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE01",
+    "course_id": 6613447,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Master the basics of cybersecurity, protect your data, and gain hands-on skills using real-world tools and labs.",
+    "hours": 3.5,
+    "instructor": "School of AI",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-03",
+    "list_price": 19.99,
+    "num_reviews": 3662,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.5015335,
+    "source": "onlinecourses_ooo",
+    "students": 33628,
+    "title": "Cybersecurity 101: Foundations for Absolute Beginners",
+    "topics": [
+     "cybersecurity"
+    ],
+    "url": "https://www.udemy.com/course/cybersecurity-101-foundations-for-absolute-beginners/"
+   },
+   "preview_id": 55
+  },
   "6615885": {
    "course": {
     "certificate": "",
@@ -311,6 +339,34 @@
    },
    "preview_id": 26
   },
+  "u17d6aefdaa68": {
+   "course": {
+    "certificate": "Free certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "What AI is and isn't, no maths or coding needed.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "University of Helsinki",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Elements of AI",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.elementsofai.com/"
+   },
+   "preview_id": 59
+  },
   "u1abca2577c27": {
    "course": {
     "certificate": "Free certificate",
@@ -570,6 +626,34 @@
    },
    "preview_id": 19
   },
+  "u659ec3c4208e": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "From Q-learning to PPO, with hands-on environments.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Hugging Face",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Deep Reinforcement Learning Course",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://huggingface.co/learn/deep-rl-course"
+   },
+   "preview_id": 58
+  },
   "u70dca3ac0523": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -655,6 +739,35 @@
    },
    "preview_id": 53
   },
+  "u731b5a9f42a1": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Design reliable Python code with defensive programming, performance benchmarking, clear specifications for AI assistants, and reviews of AI-generated code.",
+    "hours": 4.7,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-11",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Get started with Python programming: Part 3 - Design quality code with AI",
+    "topics": [
+     "python",
+     "ai"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/get-started-with-python-design-quality-code-ai/"
+   },
+   "preview_id": 56
+  },
   "u774f7412d1a3": {
    "course": {
     "certificate": "",
@@ -710,6 +823,34 @@
     "url": "https://developers.google.com/edu/python"
    },
    "preview_id": 32
+  },
+  "u85f6b69d1e01": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "AZ-104: Manage identities and governance in Azure",
+    "hours": 4.4,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-04",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "AZ-104: Manage identities and governance in Azure",
+    "topics": [
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/"
+   },
+   "preview_id": 57
   },
   "u8b939a93c42e": {
    "course": {
@@ -1214,6 +1355,7 @@
  ],
  "queue": [],
  "seen": {
+  "6613447": "2026-11-14T02:36:19.053293+00:00",
   "6615885": "2026-11-06T11:43:28.007760+00:00",
   "6627435": "2026-11-06T11:43:28.703890+00:00",
   "6871029": "2026-10-23T16:04:40.308795+00:00",
@@ -1227,6 +1369,7 @@
   "7126561": "2026-10-23T16:04:41.052673+00:00",
   "7226295": "2026-11-10T02:21:44.441240+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
+  "u17d6aefdaa68": "2026-11-14T02:36:21.001152+00:00",
   "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
   "u21fa6f3a1d07": "2026-11-10T02:21:45.384622+00:00",
   "u2911da51adf2": "2026-11-06T11:43:32.691047+00:00",
@@ -1236,12 +1379,15 @@
   "u39ccd71a8e31": "2026-10-23T16:11:55.633314+00:00",
   "u4afeb19d24cb": "2026-11-11T02:19:42.391253+00:00",
   "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
+  "u659ec3c4208e": "2026-11-14T02:36:20.494939+00:00",
   "u70dca3ac0523": "2026-10-23T16:11:54.648286+00:00",
   "u70ff0dc43714": "2026-11-11T02:19:43.770032+00:00",
   "u72d021d95e1f": "2026-11-11T02:19:43.308093+00:00",
+  "u731b5a9f42a1": "2026-11-14T02:36:19.507162+00:00",
   "u774f7412d1a3": "2026-10-24T11:37:59.577576+00:00",
   "u7aed151ccaa3": "2026-11-04T02:35:26.443044+00:00",
   "u7e978d77c061": "2026-10-23T16:11:55.154237+00:00",
+  "u85f6b69d1e01": "2026-11-14T02:36:19.961014+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
   "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
   "ub1b51e824b2f": "2026-11-10T02:21:44.911386+00:00",
@@ -1259,8 +1405,8 @@
   "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
  },
  "slots_done": {
-  "2026-11-10 preview 07:30": true,
-  "2026-11-11 preview 07:30": true
+  "2026-11-11 preview 07:30": true,
+  "2026-11-14 preview 07:30": true
  },
  "update_offset": 543331545
 }
