@@ -368,6 +368,35 @@
    },
    "preview_id": 26
   },
+  "u156c90a43ab7": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Explore agentic DevOps, manage work with Azure Boards and GitHub Copilot, and use Azure DevOps MCP Server with access controls and human oversight.",
+    "hours": 4.6,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-17",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "AZ-401: Plan and govern work for agentic DevOps",
+    "topics": [
+     "cloud",
+     "devops"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/az-401-plan-govern-agentic-devops/"
+   },
+   "preview_id": 63
+  },
   "u17d6aefdaa68": {
    "course": {
     "certificate": "Free certificate",
@@ -939,6 +968,34 @@
    },
    "preview_id": 37
   },
+  "u97c1a52e1c1b": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "21 lessons on building generative AI apps.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Generative AI for Beginners",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://github.com/microsoft/generative-ai-for-beginners"
+   },
+   "preview_id": 66
+  },
   "ub1b51e824b2f": {
    "course": {
     "certificate": "Free Microsoft Learn trophy",
@@ -1288,6 +1345,34 @@
    },
    "preview_id": 28
   },
+  "uf606f9314f0a": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Hands-on notebooks on prompting, tool use and building with LLMs.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Anthropic",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Anthropic courses: prompt engineering and the Claude API",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://github.com/anthropics/courses"
+   },
+   "preview_id": 65
+  },
   "uf9c68335a743": {
    "course": {
     "certificate": "Free certificate",
@@ -1372,6 +1457,34 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/understand-data-concepts/"
    },
    "preview_id": 18
+  },
+  "ufa7e1bb5bdcd": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Draft prerequisite inventory of existing modules, copied without content changes.",
+    "hours": 21.8,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-17",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "DevOps foundations for the transition to agentic DevOps",
+    "topics": [
+     "devops"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/az-401-devops-foundations-prerequisites/"
+   },
+   "preview_id": 64
   }
  },
  "posted": [
@@ -1455,6 +1568,7 @@
   "7226295": "2026-11-10T02:21:44.441240+00:00",
   "7275115": "2026-11-14T16:00:34.286158+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
+  "u156c90a43ab7": "2026-11-21T15:39:54.898941+00:00",
   "u17d6aefdaa68": "2026-11-14T02:36:21.001152+00:00",
   "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
   "u21fa6f3a1d07": "2026-11-10T02:21:45.384622+00:00",
@@ -1476,6 +1590,7 @@
   "u85f6b69d1e01": "2026-11-14T02:36:19.961014+00:00",
   "u8b939a93c42e": "2026-10-23T16:11:54.156672+00:00",
   "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
+  "u97c1a52e1c1b": "2026-11-21T15:39:56.436603+00:00",
   "ub1b51e824b2f": "2026-11-10T02:21:44.911386+00:00",
   "ub34f5008e8cd": "2026-11-11T02:19:42.848303+00:00",
   "ub54df125eff2": "2026-11-06T11:43:29.397292+00:00",
@@ -1488,10 +1603,14 @@
   "ue647496b03be": "2026-11-14T16:00:35.525021+00:00",
   "uedd501a0928d": "2026-11-10T02:21:46.485128+00:00",
   "uf36a7ac14933": "2026-11-02T02:29:04.383804+00:00",
+  "uf606f9314f0a": "2026-11-21T15:39:55.955582+00:00",
   "uf9c68335a743": "2026-10-24T06:39:15.427068+00:00",
   "uf9f36bff2f6d": "2026-11-14T16:00:34.990611+00:00",
-  "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00"
+  "ufa1f1985cceb": "2026-10-24T06:39:14.326735+00:00",
+  "ufa7e1bb5bdcd": "2026-11-21T15:39:55.411751+00:00"
  },
- "slots_done": {},
+ "slots_done": {
+  "2026-11-21 preview 21:00": true
+ },
  "update_offset": 543331545
 }
