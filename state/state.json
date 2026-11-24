@@ -84,6 +84,34 @@
    },
    "preview_id": 35
   },
+  "6630829": {
+   "course": {
+    "certificate": "",
+    "coupon": "NOVFREE02",
+    "course_id": 6630829,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "CAIO | Lead AI-Driven Organizations | Master Governance, Data Strategy & C-Suite Leadership for Scalable Innovation",
+    "hours": 20.0,
+    "instructor": "School of AI",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-02-03",
+    "list_price": 19.99,
+    "num_reviews": 1399,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.446524,
+    "source": "discudemy",
+    "students": 27207,
+    "title": "Certified Chief AI Officer Program: AI Strategy & Governance",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/chief-ai-officer-program-lead-ai-strategy-governance/"
+   },
+   "preview_id": 67
+  },
   "6929045": {
    "course": {
     "certificate": "",
@@ -167,6 +195,62 @@
     "url": "https://www.udemy.com/course/ai-agents-copilot-studio-azure-foundry-microsoft-foundry/"
    },
    "preview_id": 25
+  },
+  "7004091": {
+   "course": {
+    "certificate": "",
+    "coupon": "0D46D438DE62FD9EF84F",
+    "course_id": 7004091,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Learn SQL, MySQL, PostgreSQL, And MongoDB To Master M&lt;odern Database Design And Management.",
+    "hours": 5.5,
+    "instructor": "Logic Labs",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-01-08",
+    "list_price": 19.99,
+    "num_reviews": 36,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.0277777,
+    "source": "discudemy",
+    "students": 4793,
+    "title": "Complete Database Course: SQL, MySQL, PostgreSQL & MongoDB",
+    "topics": [
+     "data"
+    ],
+    "url": "https://www.udemy.com/course/complete-database-course-sql-mysql-postgresql-mongodb/"
+   },
+   "preview_id": 68
+  },
+  "7004151": {
+   "course": {
+    "certificate": "",
+    "coupon": "C4A2EDC84E655D091542",
+    "course_id": 7004151,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Core Concepts of Python Data Structures and Algorithms Explained Clearly",
+    "hours": 5.0,
+    "instructor": "Logic Labs",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-01-08",
+    "list_price": 19.99,
+    "num_reviews": 10,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.15,
+    "source": "discudemy",
+    "students": 3534,
+    "title": "Complete Guide to Python Data Structures & Algorithms Course",
+    "topics": [
+     "python"
+    ],
+    "url": "https://www.udemy.com/course/complete-guide-to-python-data-structures-and-algorithms-cour/"
+   },
+   "preview_id": 69
   },
   "7031585": {
    "course": {
@@ -339,6 +423,63 @@
     "url": "https://www.udemy.com/course/ai-governance-and-security/"
    },
    "preview_id": 60
+  },
+  "u007f4e99668e": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "12 weeks, 26 lessons of classic machine learning.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Machine Learning for Beginners",
+    "topics": [
+     "ai",
+     "python"
+    ],
+    "url": "https://github.com/microsoft/ML-For-Beginners"
+   },
+   "preview_id": 72
+  },
+  "u0e397e093872": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn to migrate physical and virtual on-premises Windows Server workloads to Azure.",
+    "hours": 2.9,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-13",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Migrate Windows Server workloads to Azure",
+    "topics": [
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/migrate-windows-server-workloads-azure/"
+   },
+   "preview_id": 70
   },
   "u12df0e68f90c": {
    "course": {
@@ -684,6 +825,35 @@
    },
    "preview_id": 19
   },
+  "u5faa3ca9122b": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Learn how to get started with AI workloads and solutions in Microsoft Foundry.",
+    "hours": 6.5,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-11",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Get started with AI applications and agents on Azure",
+    "topics": [
+     "ai",
+     "cloud"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/get-started-ai-apps-agents/"
+   },
+   "preview_id": 71
+  },
   "u659ec3c4208e": {
    "course": {
     "certificate": "",
@@ -995,6 +1165,34 @@
     "url": "https://github.com/microsoft/generative-ai-for-beginners"
    },
    "preview_id": 66
+  },
+  "ua027505474f5": {
+   "course": {
+    "certificate": "",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Google's fast-paced intro to machine learning with exercises.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Google",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Machine Learning Crash Course",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://developers.google.com/machine-learning/crash-course"
+   },
+   "preview_id": 73
   },
   "ub1b51e824b2f": {
    "course": {
@@ -1493,15 +1691,20 @@
   "6613447": "2026-11-14T02:36:19.053293+00:00",
   "6615885": "2026-11-06T11:43:28.007760+00:00",
   "6627435": "2026-11-06T11:43:28.703890+00:00",
+  "6630829": "2026-11-24T06:37:43.442162+00:00",
   "6929045": "2026-11-11T02:19:39.519487+00:00",
   "6956873": "2026-11-11T02:19:41.861101+00:00",
   "6978899": "2026-11-02T02:29:02.778932+00:00",
+  "7004091": "2026-11-24T06:37:44.048802+00:00",
+  "7004151": "2026-11-24T06:37:44.540059+00:00",
   "7031585": "2026-11-11T02:19:41.400568+00:00",
   "7043981": "2026-11-11T02:19:40.454324+00:00",
   "7047765": "2026-11-11T02:19:40.919937+00:00",
   "7062055": "2026-11-11T02:19:39.973123+00:00",
   "7226295": "2026-11-10T02:21:44.441240+00:00",
   "7275115": "2026-11-14T16:00:34.286158+00:00",
+  "u007f4e99668e": "2026-11-24T06:37:46.122928+00:00",
+  "u0e397e093872": "2026-11-24T06:37:45.099338+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
   "u156c90a43ab7": "2026-11-21T15:39:54.898941+00:00",
   "u17d6aefdaa68": "2026-11-14T02:36:21.001152+00:00",
@@ -1513,6 +1716,7 @@
   "u38e095b6f47a": "2026-10-24T11:37:58.363529+00:00",
   "u4afeb19d24cb": "2026-11-11T02:19:42.391253+00:00",
   "u5ad969e58732": "2026-10-24T06:39:14.869721+00:00",
+  "u5faa3ca9122b": "2026-11-24T06:37:45.605150+00:00",
   "u659ec3c4208e": "2026-11-14T02:36:20.494939+00:00",
   "u70ff0dc43714": "2026-11-11T02:19:43.770032+00:00",
   "u72d021d95e1f": "2026-11-11T02:19:43.308093+00:00",
@@ -1522,6 +1726,7 @@
   "u85f6b69d1e01": "2026-11-14T02:36:19.961014+00:00",
   "u92bcaffbfb6e": "2026-11-06T11:43:30.136722+00:00",
   "u97c1a52e1c1b": "2026-11-21T15:39:56.436603+00:00",
+  "ua027505474f5": "2026-11-24T06:37:46.612397+00:00",
   "ub1b51e824b2f": "2026-11-10T02:21:44.911386+00:00",
   "ub34f5008e8cd": "2026-11-11T02:19:42.848303+00:00",
   "ub54df125eff2": "2026-11-06T11:43:29.397292+00:00",
@@ -1541,7 +1746,8 @@
   "ufa7e1bb5bdcd": "2026-11-21T15:39:55.411751+00:00"
  },
  "slots_done": {
-  "2026-11-21 preview 21:00": true
+  "2026-11-21 preview 21:00": true,
+  "2026-11-24 preview 12:00": true
  },
  "update_offset": 543331545
 }
