@@ -367,6 +367,34 @@
    },
    "preview_id": 46
   },
+  "7104805": {
+   "course": {
+    "certificate": "",
+    "coupon": "12881343A8C842E24C02",
+    "course_id": 7104805,
+    "currency": "USD",
+    "expires_text": "",
+    "headline": "Design AI-powered business solutions using agentic architecture and Microsoft AI ecosystem",
+    "hours": 1.0,
+    "instructor": "Anton Voroniuk• 1.250.000+ Students",
+    "kind": "coupon",
+    "language": "english",
+    "last_updated": "2026-10-25",
+    "list_price": 19.99,
+    "num_reviews": 106,
+    "price": 0.0,
+    "provider": "Udemy",
+    "rating": 4.44,
+    "source": "discudemy",
+    "students": 1441,
+    "title": "AB-100: Microsoft Certified: Agentic AI Business Solutions",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://www.udemy.com/course/ab-100-microsoft-certified-agentic-ai-business-solutions-h/"
+   },
+   "preview_id": 74
+  },
   "7226295": {
    "course": {
     "certificate": "",
@@ -452,6 +480,34 @@
     "url": "https://github.com/microsoft/ML-For-Beginners"
    },
    "preview_id": 72
+  },
+  "u0098b095a0f2": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Build, secure, and release data-driven web applications on Microsoft Fabric using TypeScript and the Rayfin CLI and SDK.",
+    "hours": 7.3,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-24",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Build and ship data-driven apps using Fabric Apps",
+    "topics": [
+     "webdev"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/build-ship-data-driven-apps-fabric-apps/"
+   },
+   "preview_id": 75
   },
   "u0e397e093872": {
    "course": {
@@ -594,6 +650,34 @@
     "url": "https://www.kaggle.com/learn/pandas"
    },
    "preview_id": 38
+  },
+  "u1d444b38f00a": {
+   "course": {
+    "certificate": "Free Microsoft Learn trophy",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Explore the core products and capabilities of Microsoft Power Platform—including Power Apps, Power Automate, Microsoft Dataverse, Copilot Studio, and governance tools—and discover how AI is embedded across the platform to help you build smarter, faster solutions. PL-900",
+    "hours": 5.7,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "2026-11-18",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Microsoft Learn",
+    "rating": 0.0,
+    "source": "ms_learn",
+    "students": 0,
+    "title": "Explore the fundamentals of Microsoft Power Platform",
+    "topics": [
+     "ai"
+    ],
+    "url": "https://learn.microsoft.com/en-us/training/paths/pl-900-power-platform-fundamentals/"
+   },
+   "preview_id": 76
   },
   "u21fa6f3a1d07": {
    "course": {
@@ -1426,6 +1510,34 @@
    },
    "preview_id": 43
   },
+  "ud7e3718de442": {
+   "course": {
+    "certificate": "Free badge",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Python basics with labs, aligned to the PCEP certification.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "Cisco Networking Academy",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "Python Essentials 1",
+    "topics": [
+     "python"
+    ],
+    "url": "https://www.netacad.com/courses/python-essentials-1"
+   },
+   "preview_id": 77
+  },
   "ue2519171ae01": {
    "course": {
     "certificate": "",
@@ -1482,6 +1594,37 @@
     "url": "https://learn.microsoft.com/en-us/training/paths/operationalize-gen-ai-apps/"
    },
    "preview_id": 62
+  },
+  "uecd9cb43e928": {
+   "course": {
+    "certificate": "Free to learn; exam fee for certificate",
+    "coupon": "",
+    "course_id": null,
+    "currency": "INR",
+    "expires_text": "",
+    "headline": "Full university courses from India's top institutes.",
+    "hours": 0.0,
+    "instructor": "",
+    "kind": "free",
+    "language": "english",
+    "last_updated": "",
+    "list_price": 0.0,
+    "num_reviews": 0,
+    "price": null,
+    "provider": "NPTEL",
+    "rating": 0.0,
+    "source": "catalog",
+    "students": 0,
+    "title": "NPTEL courses from IITs and IISc",
+    "topics": [
+     "python",
+     "ai",
+     "data",
+     "cloud"
+    ],
+    "url": "https://nptel.ac.in/courses"
+   },
+   "preview_id": 78
   },
   "uedd501a0928d": {
    "course": {
@@ -1701,14 +1844,17 @@
   "7043981": "2026-11-11T02:19:40.454324+00:00",
   "7047765": "2026-11-11T02:19:40.919937+00:00",
   "7062055": "2026-11-11T02:19:39.973123+00:00",
+  "7104805": "2026-11-25T11:48:40.602495+00:00",
   "7226295": "2026-11-10T02:21:44.441240+00:00",
   "7275115": "2026-11-14T16:00:34.286158+00:00",
   "u007f4e99668e": "2026-11-24T06:37:46.122928+00:00",
+  "u0098b095a0f2": "2026-11-25T11:48:41.369326+00:00",
   "u0e397e093872": "2026-11-24T06:37:45.099338+00:00",
   "u12df0e68f90c": "2026-11-02T02:29:03.307716+00:00",
   "u156c90a43ab7": "2026-11-21T15:39:54.898941+00:00",
   "u17d6aefdaa68": "2026-11-14T02:36:21.001152+00:00",
   "u1abca2577c27": "2026-11-06T11:43:30.826122+00:00",
+  "u1d444b38f00a": "2026-11-25T11:48:42.087984+00:00",
   "u21fa6f3a1d07": "2026-11-10T02:21:45.384622+00:00",
   "u2911da51adf2": "2026-11-06T11:43:32.691047+00:00",
   "u2bb3d224f718": "2026-11-04T02:35:25.297451+00:00",
@@ -1731,7 +1877,9 @@
   "uc2cf46c8f4d7": "2026-11-02T02:29:03.850962+00:00",
   "uc40daf7cc775": "2026-11-02T02:29:04.909941+00:00",
   "ud77a6ddbcd7d": "2026-11-10T02:21:45.855387+00:00",
+  "ud7e3718de442": "2026-11-25T11:48:42.769750+00:00",
   "ue647496b03be": "2026-11-14T16:00:35.525021+00:00",
+  "uecd9cb43e928": "2026-11-25T11:48:43.469796+00:00",
   "uedd501a0928d": "2026-11-10T02:21:46.485128+00:00",
   "uf36a7ac14933": "2026-11-02T02:29:04.383804+00:00",
   "uf606f9314f0a": "2026-11-21T15:39:55.955582+00:00",
@@ -1739,7 +1887,8 @@
   "ufa7e1bb5bdcd": "2026-11-21T15:39:55.411751+00:00"
  },
  "slots_done": {
-  "2026-11-24 preview 12:00": true
+  "2026-11-24 preview 12:00": true,
+  "2026-11-25 preview 17:00": true
  },
  "update_offset": 543331545
 }
